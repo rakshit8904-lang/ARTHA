@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Savings allocation · {{ household.name }}{% endblock %}
+{% block content %}
+<h1>Monthly savings allocation</h1>
+<p class="muted">{{ household.name }} · {{ month }}</p>
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">Back to household</a> · <a href="{{ url_for('plans.monthly', household_id=household.id, month=month) }}">Monthly plan</a></p>
+{% if surplus < 0 %}<div class="flash error" role="alert">Your planned commitments exceed planned income by {{ money(-surplus) }}. Review your monthly plan before allocating money.</div>{% else %}
+<div class="card">
+  <h2>Available planned surplus: {{ money(surplus) }}</h2>
+  <p>Planned income: {{ money(planned_income) }} · Planned commitments: {{ money(commitments) }}</p>
+  <p class="muted">This is based only on your saved plan, not verified cash or bank balance. Allocations do not move money or create ledger entries.</p>
+</div>
+<form method="post" class="card">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <input type="hidden" name="revision" value="{{ plan.revision }}">
+  <label for="emergency_reserve">Emergency reserve contribution (₹)</label>
+  <input id="emergency_reserve" name="emergency_reserve" type="number" min="0" step="0.01" required value="{{ '%.2f'|format(allocation.emergency_reserve / 100) }}" {% if role != 'owner' %}disabled{% endif %}>
+  <label for="savings_goals">Other savings goals (₹)</label>
+  <input id="savings_goals" name="savings_goals" type="number" min="0" step="0.01" required value="{{ '%.2f'|format(allocation.savings_goals / 100) }}" {% if role != 'owner' %}disabled{% endif %}>
+  <label for="discretionary">Discretionary / flexible spending (₹)</label>
+  <input id="discretionary" name="discretionary" type="number" min="0" step="0.01" required value="{{ '%.2f'|format(allocation.discretionary / 100) }}" {% if role != 'owner' %}disabled{% endif %}>
+  <p>Unallocated after saved choices: <strong>{{ money(allocation.unallocated) }}</strong> (using the current monthly plan)</p>
+  {% if allocation.unallocated < 0 %}<p class="errors" role="alert">Saved allocations exceed the current surplus. Review these choices before saving.</p>{% endif %}
+  {% if role == 'owner' %}<button type="submit">Save allocation</button>{% else %}<p class="muted">Viewers can inspect allocations but cannot change them.</p>{% endif %}
+</form>
+{% endif %}
+{% endblock %}

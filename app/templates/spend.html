@@ -1,0 +1,39 @@
+{% extends "base.html" %}{% block title %}Spend · {{ household.name }}{% endblock %}
+{% block content %}
+<div class="spend-page">
+  <a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a>
+  <header class="spend-heading">
+    <h1>Spend</h1>
+    {% if role == 'owner' %}<a class="btn" href="{{ url_for('web.imports_page', household_id=household.id) }}">Import statement</a>{% endif %}
+  </header>
+  <section class="card spend-card">
+    <h2>Confirmed spending · all time</h2>
+    <strong>{{ money(totals.confirmed) }}</strong>
+    {% if totals.debit or totals.credit %}
+    <h3>Awaiting classification</h3>
+    {% if totals.debit %}<p>Money out: {{ money(totals.debit) }}</p>{% endif %}
+    {% if totals.credit %}<p>Money in: {{ money(totals.credit) }}</p>{% endif %}
+    <a href="{{ url_for('web.ledger_page', household_id=household.id, type='unclassified') }}">View transactions to classify</a>
+    {% endif %}
+  </section>
+  <section class="card spend-card">
+    <h2>Your transactions</h2>
+    {% if rows %}
+    <p class="muted">Showing {{ rows|length }} of {{ total }} approved purchases, fees, and refunds.</p>
+    <ul class="spend-activity">
+      {% for row in rows %}
+      <li>
+        <div><a href="{{ url_for('web.transaction_detail', transaction_id=row.id) }}">{{ row.description }}</a>
+          <small>{{ row.transaction_date.strftime('%d %b %Y') }} · {{ row.category or 'Uncategorized' }}{% if row.transaction_type != 'purchase' %} · {{ row.transaction_type|capitalize }}{% endif %}</small>
+        </div>
+        <strong>{{ '+' if row.direction == 'credit' else '−' }}{{ money(row.amount_minor) }}</strong>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>Approved purchases, fees, and refunds will appear here.</p>
+    {% endif %}
+    <a href="{{ url_for('web.ledger_page', household_id=household.id) }}">View full ledger</a>
+  </section>
+</div>
+{% endblock %}

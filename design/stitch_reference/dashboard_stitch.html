@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#bccac0","error-container":"#ffdad6","surface-variant":"#dae2fd","tertiary":"#006194","surface-tint":"#006c4a","surface":"#faf8ff","inverse-on-surface":"#eef0ff","on-surface-variant":"#3d4a42","surface-container":"#eaedff","on-error-container":"#93000a","on-error":"#ffffff","surface-dim":"#d2d9f4","on-tertiary-fixed":"#001d31","secondary-container":"#6860ef","on-secondary":"#ffffff","tertiary-fixed":"#cce5ff","on-tertiary":"#ffffff","surface-container-low":"#f2f3ff","on-secondary-container":"#fffbff","inverse-primary":"#68dba9","error":"#ba1a1a","surface-container-high":"#e2e7ff","primary":"#006948","primary-fixed":"#85f8c4","secondary-fixed":"#e3dfff","on-secondary-fixed-variant":"#372abf","tertiary-container":"#007bb9","tertiary-fixed-dim":"#93ccff","background":"#faf8ff","on-primary-container":"#f5fff7","primary-container":"#00855d","surface-container-lowest":"#ffffff","on-primary":"#ffffff","inverse-surface":"#283044","secondary":"#4e45d5","on-background":"#131b2e","on-tertiary-container":"#fdfcff","on-surface":"#131b2e","surface-container-highest":"#dae2fd","outline":"#6d7a72","on-tertiary-fixed-variant":"#004b73","primary-fixed-dim":"#68dba9","on-primary-fixed":"#002114","secondary-fixed-dim":"#c3c0ff","on-secondary-fixed":"#100069","surface-bright":"#faf8ff","on-primary-fixed-variant":"#005137"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","gutter-mobile":"1rem","gutter":"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","space-md":"1rem","margin":"2rem","margin-mobile":"1rem"},"fontFamily":{"label-numeric":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"label-sm":["Inter"],"title-md":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"label-numeric":["14px",{"lineHeight":"20px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.03em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"-0.005em","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col h-full"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Artha AI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrA2VMsgnmN92LJL2N3NI9yHBbZpNBIkfCB1KEuEJbJC6fgJ4riJTBfMNq-e66LQtHXRek4aBVlrFXQHSTQxTqPgrRjmUOIeGVMyDhaIxBjwDZ4i7ZiKkhJlnuawvsYfzAPwMD-QoC7MJ4Pizsvm1Qnf4plVUC6yF2WKFfnaR46dGWV1BgYtF99-NkVQxIjHrEOdhI-tgLGJ91ErPALr4Ln6qdgeDxQeKoC58bYfAtu5"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary tracking-tight leading-none">Artha AI</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium mt-1">FINANCIAL OS</span></div></div></div><nav class="flex-1 px-space-md py-space-sm space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-body-md text-body-md">Dashboard</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg" data-path="financial-questionnaire" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-body-md text-body-md">Financial Questionnaire</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="loans-and-liabilities" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">gpp_maybe</span><span class="font-body-md text-body-md">Loans &amp; Liabilities</span></div><span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">1 Active</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="import-statements" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">upload_file</span><span class="font-body-md text-body-md">Import Statements</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="transactions" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">receipt_long</span><span class="font-body-md text-body-md">Transactions</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-analysis" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">bar_chart</span><span class="font-body-md text-body-md">Financial Analysis</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-goals" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">track_changes</span><span class="font-body-md text-body-md">Financial Goals</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="monthly-plan" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">event_available</span><span class="font-body-md text-body-md">Monthly Plan</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="city-cost-comparison" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">location_city</span><span class="font-body-md text-body-md">City Cost Comparison</span></div><span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Posh vs Budget</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="artha-ai-assistant" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span><span class="font-body-md text-body-md font-medium text-on-surface">Artha AI Assistant</span></div><span class="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="financial-profile" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">manage_accounts</span><span class="font-body-md text-body-md">Financial Profile</span></div></a></nav></div><div class="p-space-md space-y-space-sm bg-surface-container-lowest"><div class="p-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Health Score</span><span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Healthy</span></div><div class="flex items-baseline gap-1"><span class="font-headline-sm text-headline-sm text-primary font-bold">78</span><span class="font-label-numeric text-label-numeric text-on-surface-variant">/ 100</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5 mt-space-xs overflow-hidden"><div class="bg-primary h-full rounded-full" style="width: 78%"></div></div></div><div class="flex items-center justify-between pt-space-xs px-space-sm"><a class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="help-center" href="#"><span class="material-symbols-outlined text-[16px]">help</span><span>Help</span></a><a class="flex items-center gap-1 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[16px]">settings</span><span>Settings</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between px-gutter"><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-primary-fixed/50 text-on-primary-fixed font-label-sm text-label-sm"><span class="material-symbols-outlined text-[14px]">verified</span><span>Personal Wealth &amp; Planning</span></div><div class="relative w-80 md:w-96"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full pl-9 pr-4 py-2 bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/70 rounded-full font-body-md text-body-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] focus:outline-none focus:ring-2 focus:ring-primary/20" placeholder="Search transactions, insights, loans..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="font-label-numeric text-label-numeric font-bold text-primary">₹</span><span class="font-label-sm text-label-sm font-semibold text-on-surface">INR</span></div><button aria-label="Notifications" class="relative p-2 rounded-full bg-surface-container-lowest text-on-surface-variant hover:text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold">2</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIoZrl4wSHSsG3dw8GD5OgcJFunuXqxrW3UjvZUKADHsuOH1xv6jsusUd8fUq8zua6OBRmw2am0M81tVv-xb131fBc5mbsVLAnEySednPE12ZfxVRVuXcDNzU-u9WPgwF9JksgTpDAj4gXzp7RLgDmf6zlUaL73tQSzlzXyZD45oVhsNChn7Dq6Lmt44POpc_VDdfY3f1vHqWKaqJ1myGB3B5zkeytf7cGRMT5gH3J"/><div class="hidden md:flex flex-col text-left"><span class="font-title-md text-title-md font-semibold text-on-surface leading-tight">Rohit Verma</span><span class="font-body-sm text-body-sm text-on-surface-variant leading-none">Bengaluru, Karnataka</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Form & Calculation Hub -->
+<div class="px-margin py-gutter w-full max-w-[1360px] mx-auto space-y-gutter">
+<!-- Top Stepper Progression Hub -->
+<section class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm relative overflow-hidden">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm mb-gutter">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">FINANCIAL PROFILE ONBOARDING</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm self-start md:self-auto">
+<span class="material-symbols-outlined text-[16px] text-tertiary">tune</span>
+<span>Editable Framework: Disha AIML v2.4 Dynamic Schema</span>
+</div>
+</div>
+<!-- Linear Stepper Bar -->
+<div class="relative">
+<div class="hidden lg:grid grid-cols-6 gap-space-md relative z-10">
+<!-- Step 1: Completed -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary text-[14px]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Step 1</span>
+</div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface truncate">Personal Info</span>
+<div class="w-full h-1 bg-primary rounded-full"></div>
+</div>
+<!-- Step 2: Active -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-numeric text-[12px] font-bold shadow-sm">
+                2
+              </span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Step 2</span>
+</div>
+<span class="font-body-sm text-body-sm font-bold text-primary truncate">Income Details</span>
+<div class="w-full h-1 bg-primary-container rounded-full"></div>
+</div>
+<!-- Step 3: Upcoming -->
+<div class="flex flex-col gap-2 opacity-60">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-numeric text-[12px]">
+                3
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 3</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Monthly Expenses</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Step 4: Upcoming -->
+<div class="flex flex-col gap-2 opacity-60">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-numeric text-[12px]">
+                4
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 4</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Loans &amp; Liabilities</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Step 5: Upcoming -->
+<div class="flex flex-col gap-2 opacity-60">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-numeric text-[12px]">
+                5
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 5</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Savings &amp; Assets</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+<!-- Step 6: Upcoming -->
+<div class="flex flex-col gap-2 opacity-60">
+<div class="flex items-center gap-2">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-numeric text-[12px]">
+                6
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Step 6</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Goals &amp; Lifestyle</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full"></div>
+</div>
+</div>
+<!-- Mobile/Tablet Collapsed Progress Indicator -->
+<div class="lg:hidden flex items-center justify-between bg-surface-container-low px-space-md py-2.5 rounded-lg">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm font-bold text-primary">Step 2 of 6</span>
+<span class="text-on-surface-variant">•</span>
+<span class="font-title-md text-title-md text-on-surface">Income Details</span>
+</div>
+<span class="font-label-numeric text-label-numeric font-bold text-primary">33% Completed</span>
+</div>
+</div>
+</section>
+<!-- Main Workspace Split: Form (Left) & Real-time AI Calibration Telemetry (Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: The Interactive Question Set (8 cols) -->
+<section class="lg:col-span-8 flex flex-col space-y-gutter">
+<!-- Section Intro Card -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-md">
+<div class="space-y-space-xs max-w-2xl">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span>Artha Engine Initializer</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Tell us about your earnings</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Step 2 of 6: Artha AI calibrates your budgets, tax estimations, and emergency safety buffers based on verified net cash flow.
+              </p>
+</div>
+<div class="hidden sm:flex flex-col items-end text-right shrink-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">CONFIDENTIAL</span>
+<div class="flex items-center gap-1 text-primary mt-1">
+<span class="material-symbols-outlined text-[16px]">lock</span>
+<span class="font-label-numeric text-[11px] font-semibold">256-BIT ENCRYPTED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Question 1: Primary Monthly Net Income -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm space-y-space-md hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2" for="primary-income">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px]">1</span>
+              Primary Monthly Net Inflow
+            </label>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Essential</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Enter the take-home amount credited directly to your bank account after EPF, Professional Tax, and TDS deductions.
+          </p>
+<div class="relative flex items-center max-w-md">
+<div class="absolute left-4 font-headline-md text-headline-md text-on-surface-variant font-bold select-none">₹</div>
+<input class="w-full bg-surface-container-low pl-11 pr-24 py-3.5 rounded-xl font-label-numeric text-[20px] font-bold text-on-surface focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006948] transition-all" id="primary-income" type="text" value="85,000"/>
+<span class="absolute right-4 font-body-sm text-body-sm text-on-surface-variant font-medium select-none">/ month</span>
+</div>
+<div class="flex flex-wrap items-center gap-2 pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quick Set:</span>
+<button class="quick-preset px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-numeric text-label-numeric transition-colors" data-amount="50,000" type="button">₹50,000</button>
+<button class="quick-preset px-3 py-1 rounded-full bg-primary-container text-on-primary-container font-label-numeric text-label-numeric transition-colors" data-amount="85,000" type="button">₹85,000</button>
+<button class="quick-preset px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-numeric text-label-numeric transition-colors" data-amount="1,20,000" type="button">₹1,20,000</button>
+<button class="quick-preset px-3 py-1 rounded-full bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-numeric text-label-numeric transition-colors" data-amount="2,00,000" type="button">₹2,00,000</button>
+</div>
+</div>
+<!-- Question 2: Additional Income Streams -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="space-y-0.5">
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px]">2</span>
+                Additional Income &amp; Side Inflows
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Select applicable streams. Helps Artha model risk resilience and surplus investment buffers.
+              </p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">3 Active</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Stream 1: Freelance (Selected) -->
+<div class="income-toggle-card p-space-md rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container flex flex-col justify-between gap-space-sm" data-cycle="monthly" data-income-type="freelance" data-val="15000">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed/50 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</div>
+<div>
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Freelance &amp; Consulting</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Design, dev, advisory</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-primary text-on-primary flex items-center justify-center check-box">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Current Estimated:</span>
+<span class="font-label-numeric text-label-numeric font-bold text-primary">₹15,000 / mo</span>
+</div>
+</div>
+<!-- Stream 2: Rental Income (Unselected) -->
+<div class="income-toggle-card p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low flex flex-col justify-between gap-space-sm opacity-80" data-cycle="monthly" data-income-type="rental" data-val="0">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">real_estate_agent</span>
+</div>
+<div>
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Rental / Real Estate</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lease, flatmates, land</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-surface-container-highest flex items-center justify-center check-box"></div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Status:</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tap to add</span>
+</div>
+</div>
+<!-- Stream 3: Stock Dividends & Interest (Selected) -->
+<div class="income-toggle-card p-space-md rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container flex flex-col justify-between gap-space-sm" data-cycle="quarterly" data-income-type="dividends" data-val="2500">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">candlestick_chart</span>
+</div>
+<div>
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Dividends &amp; Interest</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mutual funds, stocks, FD</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-primary text-on-primary flex items-center justify-center check-box">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Current Estimated:</span>
+<span class="font-label-numeric text-label-numeric font-bold text-tertiary">₹2,500 / quarter</span>
+</div>
+</div>
+<!-- Stream 4: Annual Performance Bonus (Selected) -->
+<div class="income-toggle-card p-space-md rounded-xl bg-surface-container-low cursor-pointer transition-all hover:bg-surface-container flex flex-col justify-between gap-space-sm" data-cycle="annual" data-income-type="bonus" data-val="120000">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">rewarded_ads</span>
+</div>
+<div>
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Annual Incentive / Bonus</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Yearly company variable payout</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-primary text-on-primary flex items-center justify-center check-box">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Current Estimated:</span>
+<span class="font-label-numeric text-label-numeric font-bold text-secondary">₹1,20,000 / year</span>
+</div>
+</div>
+<!-- Stream 5: Family Stipend / Support (Unselected) -->
+<div class="income-toggle-card p-space-md rounded-xl bg-surface-container-lowest shadow-sm cursor-pointer transition-all hover:bg-surface-container-low flex flex-col justify-between gap-space-sm opacity-80 md:col-span-2" data-cycle="monthly" data-income-type="stipend" data-val="0">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">family_restroom</span>
+</div>
+<div>
+<h2 class="font-body-md text-body-md font-semibold text-on-surface">Family Support / Allowance</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Parental allowance, education stipend, trust disbursements</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-md bg-surface-container-highest flex items-center justify-center check-box"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Question 3: Frequency & Stability Pattern -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm space-y-space-md">
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px]">3</span>
+            Inflow Frequency &amp; Stability Pattern
+          </label>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-sm">
+<label class="cursor-pointer group flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input checked="" class="hidden" name="frequency" type="radio" value="fixed"/>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">calendar_month</span>
+<span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+</span>
+</div>
+<span class="font-title-md text-title-md font-semibold leading-tight">Fixed Monthly</span>
+<span class="font-body-sm text-body-sm opacity-80 mt-1">Steady salaried pay</span>
+</label>
+<label class="cursor-pointer group flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input class="hidden" name="frequency" type="radio" value="variable"/>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">ssid_chart</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest"></span>
+</div>
+<span class="font-title-md text-title-md font-semibold leading-tight">Variable / Gig</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 group-has-[:checked]:text-on-primary-container">Fluctuating contracts</span>
+</label>
+<label class="cursor-pointer group flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input class="hidden" name="frequency" type="radio" value="biweekly"/>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">date_range</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest"></span>
+</div>
+<span class="font-title-md text-title-md font-semibold leading-tight">Bi-Weekly</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 group-has-[:checked]:text-on-primary-container">Fortnightly payouts</span>
+</label>
+<label class="cursor-pointer group flex flex-col justify-between p-space-md rounded-xl bg-surface-container-low has-[:checked]:bg-primary-container has-[:checked]:text-on-primary-container transition-all">
+<input class="hidden" name="frequency" type="radio" value="business"/>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">storefront</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-highest"></span>
+</div>
+<span class="font-title-md text-title-md font-semibold leading-tight">Business</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 group-has-[:checked]:text-on-primary-container">Enterprise receipts</span>
+</label>
+</div>
+</div>
+<!-- Question 4 & 5: Dependents & Base City (Combined Row) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Dependents Counter -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm space-y-space-md">
+<div>
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px]">4</span>
+                Financial Dependants
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Individuals reliant on your monthly cash flow.
+              </p>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-2 rounded-xl">
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" id="dep-decrement" type="button">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface" id="dep-count">1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="dep-label">Parents dependent</span>
+</div>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" id="dep-increment" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+</div>
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-outline">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>Modulates recommended liquid runway multiplier</span>
+</div>
+</div>
+<!-- Base Location / Cost-of-Living Baseline -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm space-y-space-md">
+<div>
+<label class="font-title-md text-title-md text-on-surface font-semibold flex items-center gap-2" for="city-select">
+<span class="flex items-center justify-center w-5 h-5 rounded-full bg-surface-container-high text-on-surface-variant font-label-numeric text-[11px]">5</span>
+                Current Operating Base City
+              </label>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                Calibrates living cost index and rental benchmarks.
+              </p>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">location_on</span>
+<select class="w-full bg-surface-container-low pl-10 pr-10 py-3 rounded-xl font-body-md text-body-md text-on-surface font-medium focus:outline-none focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#006948] transition-all appearance-none cursor-pointer" id="city-select">
+<option selected="" value="blr">Bengaluru, Karnataka (Tier-1 Tech Hub)</option>
+<option value="mum">Mumbai, Maharashtra (Tier-1 Metro)</option>
+<option value="del">Delhi-NCR (Gurugram/Noida)</option>
+<option value="hyd">Hyderabad, Telangana (Tier-1 Hub)</option>
+<option value="pune">Pune, Maharashtra (Tier-2 Hub)</option>
+<option value="che">Chennai, Tamil Nadu (Tier-1 Metro)</option>
+<option value="tier2">Other Tier-2 / Tier-3 Regional City</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px] pointer-events-none">expand_more</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="text-on-surface-variant">COL Index Factor:</span>
+<span class="font-label-numeric text-label-numeric font-semibold text-primary">1.28x National Avg</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Interactive Cash Flow & Safety Runway Card (4 cols) -->
+<aside class="lg:col-span-4 flex flex-col space-y-gutter sticky top-20">
+<!-- Engine Telemetry Card -->
+<div class="bg-surface-container-lowest rounded-xl p-gutter shadow-md space-y-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">REAL-TIME CAPACITY</span>
+<span class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+              Live Sync
+            </span>
+</div>
+<!-- Total Monthly & Annual Highlights -->
+<div class="p-space-md rounded-xl bg-surface-container-low space-y-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Estimated Monthly Capacity</span>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">₹94,166</span>
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">/ mo</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<span class="font-body-sm text-body-sm">Estimated Annual Inflow:</span>
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">₹11,30,000</span>
+</div>
+</div>
+<!-- Emergency Cushion Benchmark -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Recommended Safety Cushion</span>
+<span class="font-label-numeric text-label-numeric font-bold text-primary">₹2,82,500</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Tailored for 1 dependant in Bengaluru (3–6 months essential operational runway).
+            </p>
+<div class="w-full bg-surface-container-highest rounded-full h-2 overflow-hidden mt-2">
+<div class="bg-primary h-full rounded-full transition-all duration-500" style="width: 48%"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-1">
+<span>Basics (₹1.41L)</span>
+<span>Optimal (₹2.82L)</span>
+<span>Ultra-Safe (₹4.23L)</span>
+</div>
+</div>
+<!-- Allocation Projection Visual Breakdown -->
+<div class="pt-space-sm space-y-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">50-30-20 Smart Rule Baseline</span>
+<div class="space-y-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                  Needs &amp; Fixed (50%)
+                </span>
+<span class="font-label-numeric text-label-numeric font-semibold">₹47,083</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-full rounded-full" style="width: 50%"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm pt-1">
+<span class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                  Wants &amp; Discretionary (30%)
+                </span>
+<span class="font-label-numeric text-label-numeric font-semibold">₹28,250</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-secondary h-full rounded-full" style="width: 30%"></div>
+</div>
+<div class="flex items-center justify-between text-body-sm pt-1">
+<span class="flex items-center gap-1.5 text-on-surface font-medium">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+                  Wealth Accumulation / SIP (20%)
+                </span>
+<span class="font-label-numeric text-label-numeric font-semibold">₹18,833</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-tertiary h-full rounded-full" style="width: 20%"></div>
+</div>
+</div>
+</div>
+<!-- Data Validation Confidence Rating -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-on-surface">Precision Grade A</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Validated against EPFO &amp; Income Tax slabs</span>
+</div>
+</div>
+</div>
+<!-- Help & Advisory Tip -->
+<div class="p-space-md rounded-xl bg-surface-container-high/40 space-y-2">
+<div class="flex items-center gap-2 text-primary font-semibold font-title-md text-title-md">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+<span>Why Net Inflow?</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            By modeling your disposable in-hand rupees rather than gross CTC, Artha prevents over-leveraging on loans and maintains healthy liquidity ratios.
+          </p>
+</div>
+</aside>
+</div>
+<!-- Persistent Wizard Action Footer -->
+<footer class="bg-surface-container-lowest rounded-xl p-gutter shadow-sm flex flex-col-reverse sm:flex-row items-center justify-between gap-space-md mt-space-xl">
+<!-- Ghost Save Action -->
+<button class="w-full sm:w-auto px-space-md py-2.5 text-on-surface-variant hover:text-on-surface font-title-md text-title-md font-medium transition-colors flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save &amp; Continue Later</span>
+</button>
+<!-- Directional Navigation Group -->
+<div class="w-full sm:w-auto flex items-center justify-end gap-space-sm">
+<button class="w-full sm:w-auto px-space-md py-3 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-title-md text-title-md font-semibold transition-all flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back: Personal Info</span>
+</button>
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-title-md text-title-md font-semibold shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2" type="button">
+<span>Continue to Expenses (Step 3)</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+<script>
+    // Dependents Counter Logic
+    const decBtn = document.getElementById('dep-decrement');
+    const incBtn = document.getElementById('dep-increment');
+    const countEl = document.getElementById('dep-count');
+    const labelEl = document.getElementById('dep-label');
+
+    let count = 1;
+
+    function updateDepView() {
+      countEl.textContent = count;
+      if (count === 0) {
+        labelEl.textContent = 'Independent';
+      } else if (count === 1) {
+        labelEl.textContent = 'Parents dependent';
+      } else if (count === 2) {
+        labelEl.textContent = 'Partner & Child / Parents';
+      } else {
+        labelEl.textContent = `${count} family dependants`;
+      }
+    }
+
+    if (decBtn && incBtn) {
+      decBtn.addEventListener('click', () => {
+        if (count > 0) {
+          count--;
+          updateDepView();
+        }
+      });
+
+      incBtn.addEventListener('click', () => {
+        if (count < 8) {
+          count++;
+          updateDepView();
+        }
+      });
+    }
+
+    // Quick Presets for Primary Income
+    const presetButtons = document.querySelectorAll('.quick-preset');
+    const incomeInput = document.getElementById('primary-income');
+
+    presetButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        presetButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary-container');
+          b.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+        btn.classList.add('bg-primary-container', 'text-on-primary-container');
+        if (incomeInput) {
+          incomeInput.value = btn.dataset.amount;
+        }
+      });
+    });
+
+    // Multi-select Pill Toggle Logic
+    const toggleCards = document.querySelectorAll('.income-toggle-card');
+    toggleCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const checkbox = card.querySelector('.check-box');
+        const isSelected = checkbox.innerHTML.trim().length > 0;
+        
+        if (isSelected) {
+          checkbox.innerHTML = '';
+          checkbox.className = 'w-5 h-5 rounded-md bg-surface-container-highest flex items-center justify-center check-box';
+          card.classList.add('opacity-80', 'bg-surface-container-lowest');
+          card.classList.remove('bg-surface-container-low');
+        } else {
+          checkbox.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span>';
+          checkbox.className = 'w-5 h-5 rounded-md bg-primary text-on-primary flex items-center justify-center check-box';
+          card.classList.remove('opacity-80', 'bg-surface-container-lowest');
+          card.classList.add('bg-surface-container-low');
+        }
+      });
+    });
+  </script>
+</div></main></div></body></html>

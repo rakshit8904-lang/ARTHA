@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Goals · {{ household.name }}{% endblock %}
+{% macro amount(key, label, optional=False) %}
+<label for="{{ key }}">{{ label }} (₹){% if optional %} <span class="muted">optional</span>{% endif %}</label>
+<input id="{{ key }}" name="{{ key }}" type="number" min="0" max="9999999999.99" step="0.01" inputmode="decimal" {% if not optional %}required{% endif %} value="{{ values.get(key, '') }}">
+{% endmacro %}
+{% macro gap_text(r) %}{% if r.gap_minor > 0 %}Short by {{ money(r.gap_minor) }} a month{% elif r.gap_minor < 0 %}{{ money(-r.gap_minor) }} a month more than needed{% else %}Matches the amount needed{% endif %}{% endmacro %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a></p>
+<h1>Goals</h1>
+<p>Turn something you want to achieve, such as education, a family commitment, a move, a reserve or a purchase, into a monthly saving plan. Goals are shared with everyone in this household and never change your monthly plan or recorded transactions.</p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+
+<section class="card" id="goal-list">
+<h2>Saved goals</h2>
+{% if rows %}<ul class="goal-cards">{% for item, r, problem in rows %}<li class="goal-card">
+<a href="{{ url_for('goals.index', household_id=household.id, goal_id=item.id) }}"><strong>{{ item.name }}</strong></a>{% if item.visibility == 'private' %} <span class="badge">Private</span>{% endif %}
+<span class="muted">{{ purposes.get(item.inputs.get('purpose'), '') }}</span>
+<dl><dt>Target</dt><dd>{{ money(item.inputs.target_minor) }} by {{ item.inputs.target_month }}</dd>
+{% if r %}<dt>Needed</dt><dd>{{ money(r.monthly_needed_minor) }} a month</dd><dt>You assign</dt><dd>{{ money(r.assigned_minor) }} a month</dd><dt>Gap</dt><dd>{{ gap_text(r) }}</dd>
+{% else %}<dt>Status</dt><dd>{{ problem }}</dd>{% endif %}</dl>
+</li>{% endfor %}</ul>
+<p id="goal-totals">Total you assign to shared household goals: <strong>{{ money(totals.assigned_minor) }} a month</strong>.
+{% if totals.allocated_minor is none %}Your "Savings goals" allocation for {{ totals.month }} is <strong>unknown</strong>: <a href="{{ url_for('plans.allocation', household_id=household.id) }}">save a savings allocation</a> to compare.
+{% elif totals.assigned_minor > totals.allocated_minor %}That is <strong>{{ money(totals.assigned_minor - totals.allocated_minor) }} more</strong> than your {{ totals.month }} "Savings goals" allocation of {{ money(totals.allocated_minor) }}. Lower some goal amounts or review your allocation.
+{% else %}Your {{ totals.month }} "Savings goals" allocation of {{ money(totals.allocated_minor) }} covers this{% if totals.allocated_minor > totals.assigned_minor %}, with {{ money(totals.allocated_minor - totals.assigned_minor) }} not yet assigned to a goal{% endif %}.{% endif %}</p>
+{% if totals.private_count %}<p id="goal-private-total" class="muted">Private goals you can see: {{ totals.private_count }}, assigned {{ money(totals.private_minor) }} a month. These are not included in the household total above.</p>{% endif %}
+{% else %}<p>No saved goals yet. Start with the form below.</p>{% endif %}
+{% if goal %}<p><a class="btn secondary" href="{{ url_for('goals.index', household_id=household.id) }}">New goal</a></p>{% endif %}
+</section>
+
+<form method="post" class="card" id="goal-form" action="{{ url_for('goals.index', household_id=household.id, goal_id=goal.id if goal else none) }}">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<input type="hidden" name="revision" value="{{ values.get('revision', '0') }}">
+<h2>{% if goal %}Edit goal{% else %}New goal{% endif %}</h2>
+<label for="name">Goal name (needed to save)</label>
+<input id="name" name="name" type="text" maxlength="100" value="{{ values.get('name', '') }}" placeholder="For example, Course fees 2028">
+<label for="purpose">What is this goal for?</label>
+<select id="purpose" name="purpose" required><option value="">Choose one</option>
+{% for key, label in purposes.items() %}<option value="{{ key }}" {% if values.get('purpose')==key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+<fieldset id="goal-visibility"><legend>Who can see this goal?</legend>
+{% if goal and goal.created_by != user_id %}<input type="hidden" name="visibility" value="{{ goal.visibility }}">
+<p>{{ choices[goal.visibility] }}. Only the person who created this goal can change who sees it.</p>
+{% else %}{% for key, label in choices.items() %}<label><input type="radio" name="visibility" value="{{ key }}" {% if values.get('visibility')==key %}checked{% endif %} {% if key=='household' and role!='owner' %}disabled{% endif %}> {{ label }}</label>{% endfor %}
+{% if role!='owner' %}<p class="muted">Only household owners can add goals everyone sees.</p>{% endif %}{% endif %}
+</fieldset>
+{{ amount('target_minor', goal_fields.target_minor) }}
+<label for="target_month">Target month</label>
+<input id="target_month" name="target_month" type="month" required value="{{ values.get('target_month', '') }}">
+{{ amount('saved_minor', goal_fields.saved_minor) }}
+<label for="saved_as_of">Set-aside amount checked on</label>
+<input id="saved_as_of" name="saved_as_of" type="date" required value="{{ values.get('saved_as_of', '') }}">
+{{ amount('assigned_minor', goal_fields.assigned_minor) }}
+<p class="muted">Use 0 where nothing is set aside or assigned yet. Count money only once: savings already counted for another goal should not be entered again here.</p>
+
+<h3>Ongoing costs once reached</h3>
+<p class="muted">Optional. Some goals bring new monthly costs, such as fees, insurance, upkeep or rent. Name each one; leave its amount blank if you don't know it yet. These are shown separately and are not added to the savings target.</p>
+{% for i in range(1, ongoing_lines + 1) %}<div class="goal-ongoing">
+<label for="ongoing_label_{{ i }}">Cost {{ i }} name <span class="muted">optional</span></label>
+<input id="ongoing_label_{{ i }}" name="ongoing_label_{{ i }}" type="text" maxlength="60" value="{{ values.get('ongoing_label_' ~ i, '') }}">
+{{ amount('ongoing_amount_' ~ i, 'Cost ' ~ i ~ ' monthly amount', True) }}</div>{% endfor %}
+
+<h3>Borrowing option</h3>
+<p class="muted">Optional. Fill in every field to compare borrowing part of the cost, or leave all blank.</p>
+{{ amount('loan_minor', loan_fields.loan_minor, True) }}
+<label for="rate">Yearly interest rate (%) <span class="muted">optional</span></label>
+<input id="rate" name="rate" type="number" min="0" max="50" step="0.01" inputmode="decimal" value="{{ values.get('rate', '') }}">
+<label for="term_months">Loan term in months <span class="muted">optional</span></label>
+<input id="term_months" name="term_months" type="number" min="1" max="360" step="1" inputmode="numeric" value="{{ values.get('term_months', '') }}">
+{{ amount('fees_minor', loan_fields.fees_minor, True) }}
+
+<p class="row-actions"><button name="action" value="calculate" type="submit">Calculate</button>
+{% if can_save %}<button name="action" value="save" type="submit">Save goal</button>{% endif %}</p>
+{% if not can_save %}<p class="muted">You can calculate, but you can't change this goal.</p>{% endif %}
+</form>
+
+{% if result %}<section class="card" id="goal-results" aria-labelledby="goal-results-heading">
+<h2 id="goal-results-heading">Your plan</h2>
+<div class="grid">
+<div><h3>Still to save</h3><p class="stat">{{ money(result.remaining_minor) }}</p></div>
+<div><h3>Needed each month</h3><p class="stat">{{ money(result.monthly_needed_minor) }}</p></div>
+<div><h3>You assign</h3><p class="stat">{{ money(result.assigned_minor) }}</p></div>
+</div>
+{% if result.remaining_minor == 0 %}<p>The money already set aside covers the target.</p>
+{% else %}<p>{{ result.months }} month{{ 's' if result.months != 1 }} until the target month. Saving {{ money(result.monthly_needed_minor) }} a month for {{ result.payments }} month{{ 's' if result.payments != 1 }}{% if result.final_payment_minor != result.monthly_needed_minor %}, with a final payment of {{ money(result.final_payment_minor) }}{% endif %}, reaches the target.</p>
+<p>{{ gap_text(result) }}.{% if result.gap_minor > 0 %}{% if result.months_at_assigned %} At {{ money(result.assigned_minor) }} a month it would take {{ result.months_at_assigned }} months instead.{% else %} With nothing assigned, the goal is not funded yet.{% endif %} You could change the target amount, the date or the monthly amount.{% endif %}</p>{% endif %}
+
+<h3>Ongoing costs once reached</h3>
+{% if result.ongoing_total_minor is none %}<p>{% if result.ongoing_missing %}Amounts not entered yet for: {{ result.ongoing_missing|join(', ') }}.{% else %}No ongoing costs entered.{% endif %}</p>
+{% else %}<p>Entered ongoing costs: <strong>{{ money(result.ongoing_total_minor) }} a month</strong>.{% if result.ongoing_missing %} Amount not entered yet for: {{ result.ongoing_missing|join(', ') }}.{% endif %}</p>{% endif %}
+
+{% if result.loan %}{% set loan = result.loan %}<h3>Save the full amount vs. borrow part of it</h3>
+<div class="table-wrap"><table id="goal-loan-compare"><thead><tr><th scope="col"></th><th scope="col">Save the full amount</th><th scope="col">Down payment, then loan</th></tr></thead><tbody>
+<tr><th scope="row">Amount to save</th><td>{{ money(result.remaining_minor) }}</td><td>{{ money(loan.down_remaining_minor) }} (down payment and fees {{ money(loan.down_payment_minor) }})</td></tr>
+<tr><th scope="row">Saving needed each month</th><td>{{ money(result.monthly_needed_minor) }}</td><td>{{ money(loan.monthly_needed_minor) }}</td></tr>
+<tr><th scope="row">EMI afterwards</th><td>None</td><td>{{ money(loan.emi_minor) }} for {{ loan.term_months }} months</td></tr>
+<tr><th scope="row">Interest paid</th><td>None</td><td>{{ money(loan.total_interest_minor) }}</td></tr>
+<tr><th scope="row">Total paid to the lender</th><td>None</td><td>{{ money(loan.total_repaid_minor) }}</td></tr>
+</tbody></table></div>{% endif %}
+<h3>How this was calculated</h3>
+<ul>{% for assumption in result.assumptions %}<li>{{ assumption }}</li>{% endfor %}
+<li>Set-aside amount as checked on {{ values.get('saved_as_of') }}.</li></ul>
+<p class="muted">This is a plan, not advice or a guarantee. It does not check whether this money is free after your other goals and commitments.</p>
+</section>{% endif %}
+{% endblock %}

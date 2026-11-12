@@ -1,0 +1,66 @@
+{% extends "base.html" %}{% block title %}Monthly plan · {{ household.name }}{% endblock %}
+{% macro rupees(key, label, paise, required=false) %}
+<label>{{ label }} (₹)<input name="{{ key }}" type="number" min="0" max="9999999999.99" step=".01"
+ value="{{ '%d.%02d' % (paise // 100, paise % 100) if paise is not none else '' }}" {% if required %}required{% endif %}></label>
+{% endmacro %}
+{% block content %}
+<a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a>
+<h1>Monthly plan</h1>
+<form method="get" class="row-actions"><label>Plan month <input type="month" name="month" value="{{ month }}" min="2000-01" max="2100-12" required></label><button class="secondary">Open month</button></form>
+{% if editing %}
+<form id="monthly-plan" method="post" action="{{ url_for('plans.monthly', household_id=household.id, month=month) }}">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="revision" value="{{ plan.revision if plan else 0 }}">
+  {% if prefill and not plan %}<p class="flash" role="status" id="plan-prefill">Started from your {{ prefill.month }} plan. Review every amount for {{ month }}; nothing is saved until you choose Save monthly plan.</p>{% endif %}
+  <section class="card"><h2>1. Choose your plan</h2>
+  <label>Whose money are you planning for?
+    <select name="plan_type" required><option value="">Choose a plan</option>
+      <option value="individual" {% if prefill and prefill.plan_type=='individual' %}selected{% endif %}>Individual — my money</option>
+      <option value="family" {% if prefill and prefill.plan_type=='family' %}selected{% endif %}>Family — our household budget</option></select></label>
+  <label>Current city<input type="text" name="city" maxlength="100" value="{{ prefill.city if prefill else '' }}" required></label>
+  <label>For this plan, where do you live?
+    <select name="housing" required><option value="">Choose your housing situation</option>
+    {% for key, label in [('owned','Owned home'), ('rented','Rented home'), ('family','Living with family / rent-free')] %}
+    <option value="{{ key }}" {% if prefill and prefill.housing == key %}selected{% endif %}>{{ label }}</option>
+    {% endfor %}</select></label>
+  {% if prefill and not prefill.housing %}<p>Your saved monthly amounts are {{ money(prefill.limits.get('Rent',0)) }} for rent and {{ money(prefill.limits.get('Society maintenance',0)) }} for maintenance. Review them in step 3.</p>{% endif %}
+  </section>
+  <section class="card"><h2>2. Expected monthly income</h2>
+  <p>For an individual plan, enter your own income. For a family plan, enter the household’s combined income.</p>
+  {{ rupees("income", "Monthly take-home pay", prefill.income if prefill else none, true) }}
+  {{ rupees("other_income", "Other monthly income", prefill.other_income if prefill else none) }}
+  </section>
+  <section class="card"><h2>3. Expenses and commitments</h2><p>Enter what you plan to set aside this month. Leave items that don’t apply blank.</p>
+  {% for group, items in groups.items() %}
+    <fieldset><legend>{{ group }}</legend><div class="grid">
+      {% if group == "Housing/Rent" %}
+      <div data-housing="rented">{{ rupees("Rent", "Your plan’s monthly rent share", prefill.limits.get("Rent") if prefill else none) }}
+        <label>Does that rent include society maintenance?<select name="maintenance_included">
+          <option value="">Choose one</option><option value="yes" {% if prefill and prefill.maintenance_included is sameas true %}selected{% endif %}>Yes, included</option>
+          <option value="no" {% if prefill and prefill.maintenance_included is sameas false %}selected{% endif %}>No, paid separately or no charge</option></select></label></div>
+      <div data-housing="maintenance">{{ rupees("Society maintenance", "Monthly society maintenance paid separately", prefill.limits.get("Society maintenance") if prefill else none) }}</div>
+      <div data-housing="family">{{ rupees("Housing contribution", "Housing share of the total you pay your family", prefill.limits.get("Housing contribution") if prefill else none) }}
+        <small>Enter ₹0 if you live rent-free and contribute only toward general support.</small></div>
+      {% elif group == "Family support" %}
+      {{ rupees("Pledged to parents", "Monthly family support", prefill.limits.get("Pledged to parents",0) + prefill.limits.get("Housing contribution",0) if prefill else none) }}
+      <small data-housing="family">Enter the total you pay your family, including the housing share above. Artha splits it between Housing and Family support.</small>
+      {% else %}{% for item in items %}{{ rupees(item, item, prefill.limits.get(item) if prefill else none) }}{% endfor %}{% endif %}
+    </div></fieldset>
+  {% endfor %}
+  </section>
+  <div class="row-actions"><button type="button" class="secondary" id="plan-back" hidden>Back</button><button type="button" id="plan-next" hidden>Continue</button><button id="plan-save">Save monthly plan</button></div>
+</form>
+{% elif plan %}
+<section class="card"><h2>{{ plan.plan_type|capitalize }} plan · {{ plan.city }}</h2>
+<p>Expected income <strong>{{ money(plan.income + plan.other_income) }}</strong> · Planned expenses and commitments <strong>{{ money(budgets.values()|sum) }}</strong></p>
+<p>Income left after your plan <strong>{{ money(plan.income + plan.other_income - budgets.values()|sum) }}</strong></p>
+{% if role == 'owner' %}<a href="{{ url_for('plans.monthly', household_id=household.id, month=month, edit=1) }}">Edit monthly plan</a>{% endif %}
+</section>
+<h2>Budget and recorded spending</h2>
+<div class="table-wrap"><table><thead><tr><th>Category</th><th>Planned</th><th>Recorded spending</th><th>Budget remaining</th></tr></thead>
+<tbody>{% for group in (budgets.keys()|list + actuals.keys()|reject('in', budgets)|list) %}
+{% set comparable = group in categories or group in actuals %}
+<tr><th scope="row">{{ group }}</th><td>{{ money(budgets.get(group,0)) }}</td>
+<td>{{ money(actuals.get(group,0)) if comparable else '—' }}</td><td>{{ money(budgets.get(group,0)-actuals.get(group,0)) if comparable else '—' }}</td></tr>
+{% endfor %}</tbody></table></div><p class="muted">Recorded spending uses approved purchases and fees, less linked purchase refunds received this month. A dash marks a planning item without a corresponding spending category.</p>
+{% else %}<p>The household owner has not saved a plan for this month.</p>{% endif %}
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}{{ cfg.title }} · Financial profile · {{ household.name }}{% endblock %}
+{% macro describe(i) %}{{ cfg.kinds.get(i.kind, i.kind) }}{% if i.label %} · {{ i.label }}{% endif %}:
+{% if i.state == 'amount' %}{{ money(i.amount_minor) }}{% if i.frequency %} ({{ frequencies[i.frequency][0]|lower }}){% endif %}{% else %}{{ states[i.state] }}{% endif %}{% endmacro %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a> ›
+<a href="{{ url_for('profile.overview', household_id=household.id) }}">Financial profile</a></p>
+<h1>{{ cfg.title }}</h1>
+<p>{{ cfg.intro }} Add what you know now and come back for the rest. "Don't know yet" is a fine answer; it is never counted as zero.</p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+
+<section class="card" id="profile-summary">
+<h2>So far</h2>
+{% if summary.none %}<p>You said you have none of these.</p>
+{% elif not summary.count %}<p>Nothing entered yet.</p>
+{% else %}<p>{{ summary.count }} entr{{ 'y' if summary.count == 1 else 'ies' }}{% if summary.unknown %}, {{ summary.unknown }} with amount not known yet, so totals below are partial{% endif %}.</p>
+<ul>
+{% if summary.monthly_minor is defined %}<li>Known amounts spread per month: <strong>{{ money(summary.monthly_minor) }}</strong>{% if summary.one_time %} (plus {{ summary.one_time }} one-time amount{{ 's' if summary.one_time != 1 }}){% endif %}</li>
+{% else %}<li>Known total: <strong>{{ money(summary.total_minor) }}</strong></li>{% endif %}
+{% if summary.accessible_minor is defined %}<li>Of which you said you could use within about a week: {{ money(summary.accessible_minor) }}</li>{% endif %}
+{% if summary.payments_minor is defined %}<li>Monthly payments entered: {{ money(summary.payments_minor) }}</li>{% endif %}
+{% if summary.deposits_minor is defined %}<li>Monthly deposits entered: {{ money(summary.deposits_minor) }}; rainy-day reserve set aside: {{ money(summary.reserve_minor) }}</li>{% endif %}
+{% if summary.upcoming %}<li>Next due: {% for i in summary.upcoming %}{{ cfg.kinds[i.kind] }}{% if i.label %} ({{ i.label }}){% endif %} on {{ i.date.isoformat() }}{{ ', ' if not loop.last }}{% endfor %}</li>{% endif %}
+</ul>{% endif %}
+</section>
+
+{% if readonly %}<section class="card" id="profile-readonly"><h2>Shared by the household</h2>
+<ul>{% for i in readonly %}<li>{{ describe(i) }}</li>{% endfor %}</ul>
+<p class="muted">Only household owners can change these.</p></section>{% endif %}
+
+<form method="post" class="card" id="profile-form">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<h2>Add or update</h2>
+{% for row in rows %}{% set n = loop.index0 %}
+<fieldset class="profile-item"><legend>{% if row.id %}Entry {{ loop.index }}{% else %}New entry{% endif %}</legend>
+{% if row.id %}<input type="hidden" name="{{ n }}-id" value="{{ row.id }}"><input type="hidden" name="{{ n }}-revision" value="{{ row.revision }}">{% endif %}
+<label for="{{ n }}-kind">What is it?</label>
+<select id="{{ n }}-kind" name="{{ n }}-kind"><option value="">Choose</option>
+{% for k, label in cfg.kinds.items() %}<option value="{{ k }}" {% if row.kind == k %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+<label for="{{ n }}-label">Name <span class="muted">optional, e.g. which bank or child</span></label>
+<input id="{{ n }}-label" name="{{ n }}-label" type="text" maxlength="100" value="{{ row.get('label', '') }}">
+<label for="{{ n }}-state">Do you know the amount?</label>
+<select id="{{ n }}-state" name="{{ n }}-state"><option value="">Choose</option>
+{% for k, label in states.items() %}<option value="{{ k }}" {% if row.get('state') == k %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+<label for="{{ n }}-amount">{{ cfg.amount }} (₹) <span class="muted">only if known</span></label>
+<input id="{{ n }}-amount" name="{{ n }}-amount" type="number" min="0" max="9999999999.99" step="0.01" inputmode="decimal" value="{{ row.get('amount', '') }}">
+{% if cfg.frequency %}<label for="{{ n }}-frequency">How often?</label>
+<select id="{{ n }}-frequency" name="{{ n }}-frequency"><option value="">Choose</option>
+{% for k, f in frequencies.items() %}<option value="{{ k }}" {% if row.get('frequency') == k %}selected{% endif %}>{{ f[0] }}</option>{% endfor %}</select>{% endif %}
+{% if cfg.date %}<label for="{{ n }}-date">{{ cfg.date }} <span class="muted">optional</span></label>
+<input id="{{ n }}-date" name="{{ n }}-date" type="date" value="{{ row.get('date', '') }}">{% endif %}
+{% for k, (kind, label, options) in cfg.extra.items() %}
+<label for="{{ n }}-x-{{ k }}">{{ label }} <span class="muted">optional</span></label>
+{% if kind == 'choice' %}<select id="{{ n }}-x-{{ k }}" name="{{ n }}-x-{{ k }}"><option value="">Choose</option>
+{% for ok, ol in options.items() %}<option value="{{ ok }}" {% if row.x.get(k) == ok %}selected{% endif %}>{{ ol }}</option>{% endfor %}</select>
+{% else %}<input id="{{ n }}-x-{{ k }}" name="{{ n }}-x-{{ k }}" type="number" min="0" {% if kind == 'months' %}step="1" max="600" inputmode="numeric"{% elif kind == 'rate' %}step="0.01" max="50" inputmode="decimal"{% else %}step="0.01" max="9999999999.99" inputmode="decimal"{% endif %} value="{{ row.x.get(k, '') }}">{% endif %}
+{% endfor %}
+<p>Who can see this?</p>
+{% if row.get('created_by') and row.created_by != user_id %}<input type="hidden" name="{{ n }}-visibility" value="{{ row.visibility }}">
+<p class="muted">{{ choices[row.visibility] }}. Only the person who added it can change this.</p>
+{% else %}{% for k, label in choices.items() %}<label><input type="radio" name="{{ n }}-visibility" value="{{ k }}" {% if row.get('visibility') == k %}checked{% endif %} {% if k == 'household' and role != 'owner' %}disabled{% endif %}> {{ label }}</label>{% endfor %}{% endif %}
+{% if row.id %}<label><input type="checkbox" name="{{ n }}-remove" value="1" {% if row.get('remove') %}checked{% endif %}> Remove this entry</label>{% endif %}
+</fieldset>
+{% endfor %}
+<p class="muted">Need more rows? Save, and three new blank entries appear.</p>
+{% if role == 'owner' %}<label><input type="checkbox" name="none" value="1" {% if none_checked %}checked{% endif %}> I have none of these</label>{% endif %}
+<p class="row-actions"><button type="submit">Save {{ cfg.title|lower }}</button>
+<a class="btn secondary" href="{{ url_for('profile.overview', household_id=household.id) }}">Back to profile</a></p>
+<p class="muted">Saving changes only this section. Your monthly plan, goals and recorded transactions are not changed.</p>
+</form>
+{% endblock %}

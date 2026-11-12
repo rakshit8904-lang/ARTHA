@@ -1,0 +1,13 @@
+{% if imp.review_expires_at %}
+<div id="review-deadline" data-return="{{ url_for('web.imports_page', household_id=imp.household_id) }}"
+     {% if role == 'owner' %}data-activity="{{ url_for('api.review_activity', import_id=imp.id) }}"{% endif %}>
+  <p>Unapproved rows expire after 15 minutes of inactivity, at
+    <time datetime="{{ imp.review_expires_at.strftime('%Y-%m-%dT%H:%M:%S.%fZ') }}">{{ imp.review_expires_at.strftime('%H:%M UTC') }}</time>.</p>
+  {% if role == 'owner' %}
+  <form method="post" action="{{ url_for('web.cancel_review', import_id=imp.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button class="danger">Cancel review and discard unapproved rows</button>
+  </form>
+  {% endif %}
+</div>
+{% endif %}

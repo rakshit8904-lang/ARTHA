@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · Artha AI{% endblock %}
+{% block content %}
+<div class="stitch-dashboard">
+  <section class="dash-welcome">
+    <div><span class="stitch-eyebrow">YOUR FINANCIAL OVERVIEW</span>
+      <h1>Good morning, {{ me.display_name.split(' ')[0] }}.</h1>
+      <p>Your money, commitments and next goals — in one place.</p>
+    </div>
+    <div class="dash-date"><span class="status-dot"></span> Personal workspace</div>
+  </section>
+
+  {% if me.email_verified_at is none %}<div class="flash error">Your email is not verified yet. Please verify it to secure your account.</div>{% endif %}
+  {% if not onboarding_completed %}
+  <div class="setup-banner"><div><strong>Complete your financial profile</strong><p>Add your income, everyday expenses, loans and goals to personalise your dashboard.</p></div><a class="btn-primary" href="{{ url_for('web.profile') }}">Complete profile →</a></div>
+  {% endif %}
+
+  <section class="metric-grid">
+    <article class="metric-card"><span>MONTHLY INCOME</span><strong>{% if onboarding_metrics.income is not none %}₹{{ '{:,.0f}'.format(onboarding_metrics.income) }}{% else %}—{% endif %}</strong><small>Take-home income entered</small></article>
+    <article class="metric-card"><span>KNOWN MONTHLY EXPENSES</span><strong>{% if onboarding_metrics.expenses is not none %}₹{{ '{:,.0f}'.format(onboarding_metrics.expenses) }}{% else %}—{% endif %}</strong><small>Based on answered fields; may be incomplete</small></article>
+    <article class="metric-card"><span>ESTIMATED SURPLUS</span><strong>{% if onboarding_metrics.surplus is not none %}₹{{ '{:,.0f}'.format(onboarding_metrics.surplus) }}{% else %}—{% endif %}</strong><small>Income less entered expenses only</small></article>
+    <article class="metric-card"><span>SAVINGS & ASSETS ENTERED</span><strong>₹{{ '{:,.0f}'.format(onboarding_metrics.savings) }}</strong><small>User-entered estimates</small></article>
+    <article class="metric-card"><span>OUTSTANDING LOAN</span><strong>{% if onboarding_metrics.debt is not none %}₹{{ '{:,.0f}'.format(onboarding_metrics.debt) }}{% else %}—{% endif %}</strong><small>First loan balance entered</small></article>
+    <article class="metric-card"><span>MONTHLY EMI</span><strong>{% if onboarding_metrics.emi is not none %}₹{{ '{:,.0f}'.format(onboarding_metrics.emi) }}{% else %}—{% endif %}</strong><small>First loan payment entered</small></article>
+  </section>
+
+  <section class="dash-grid">
+    <article class="dash-panel cashflow-panel">
+      <div class="panel-heading"><div><span class="stitch-eyebrow">YOUR MONEY</span><h2>Cashflow snapshot</h2></div><span class="data-chip">Onboarding answers</span></div>
+      {% if onboarding_metrics.income is not none %}
+      <div class="cashflow-visual">
+        <div class="cashflow-total"><small>Monthly take-home income</small><strong>₹{{ '{:,.0f}'.format(onboarding_metrics.income) }}</strong></div>
+        <div class="cashflow-bar"><span style="width:{% if onboarding_metrics.expenses is not none and onboarding_metrics.income > 0 %}{{ [100, (onboarding_metrics.expenses / onboarding_metrics.income * 100)|round(0)|int]|min }}{% else %}0{% endif %}%"></span></div>
+        <div class="cashflow-legend"><span><i class="legend-income"></i> Income</span><span><i class="legend-expense"></i> Known expenses</span></div>
+        <p class="muted">This is an initial estimate from the answers you entered, not a bank balance. Import and approve statements to analyse actual transactions.</p>
+      </div>
+      {% else %}
+      <div class="empty-state"><strong>Your cashflow story starts here.</strong><p>Complete your income and expense details or import a bank statement to see meaningful analysis.</p></div>
+      {% endif %}
+    </article>
+    <article class="dash-panel">
+      <div class="panel-heading"><div><span class="stitch-eyebrow">NEXT STEPS</span><h2>Build your financial picture</h2></div></div>
+      <div class="next-step-list">
+        <a href="{% if primary_household %}{{ url_for('web.imports_page', household_id=primary_household.id) }}{% else %}{{ url_for('web.dashboard') }}{% endif %}"><span class="next-icon">↑</span><span><strong>Import a bank statement</strong><small>CSV or Excel · Review before approval</small></span><b>→</b></a>
+        <a href="{% if primary_household %}{{ url_for('web.summary_page', household_id=primary_household.id) }}{% else %}{{ url_for('web.dashboard') }}{% endif %}"><span class="next-icon">▥</span><span><strong>Explore your analysis</strong><small>Understand recorded income and spending</small></span><b>→</b></a>
+        <a href="{{ url_for('web.profile') }}"><span class="next-icon">◉</span><span><strong>Update financial profile</strong><small>Keep commitments and assets current</small></span><b>→</b></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section-heading stitch-section-heading"><div><span class="stitch-eyebrow">YOUR MONEY TOOLS</span><h2>Everything you need to plan ahead</h2></div></section>
+  {% if primary_household %}
+  <section class="tool-grid">
+    <a class="tool-card" href="{{ url_for('web.ledger_page', household_id=primary_household.id) }}"><span class="tool-icon">↕</span><strong>Transactions</strong><small>Review approved income and expenses</small><b>Open →</b></a>
+    <a class="tool-card" href="{{ url_for('web.imports_page', household_id=primary_household.id) }}"><span class="tool-icon">⇧</span><strong>Import CSV / Excel</strong><small>Upload, review, correct and approve</small><b>Import →</b></a>
+    <a class="tool-card" href="{{ url_for('web.summary_page', household_id=primary_household.id) }}"><span class="tool-icon">▥</span><strong>Analysis</strong><small>Monthly totals and category breakdowns</small><b>Analyse →</b></a>
+    <a class="tool-card" href="{{ url_for('goals.index', household_id=primary_household.id) }}"><span class="tool-icon">◎</span><strong>Goals</strong><small>Save towards what matters to you</small><b>Track →</b></a>
+    <a class="tool-card" href="{{ url_for('plans.monthly', household_id=primary_household.id) }}"><span class="tool-icon">▤</span><strong>Monthly plan</strong><small>Plan spending, commitments and savings</small><b>Plan →</b></a>
+    <a class="tool-card" href="{{ url_for('web.city_affordability', household_id=primary_household.id) }}"><span class="tool-icon">⌖</span><strong>City comparison</strong><small>Compare rent and everyday living costs</small><b>Compare →</b></a>
+    <a class="tool-card" href="{{ url_for('web.assistant_page') }}"><span class="tool-icon">✳</span><strong>Artha Assistant</strong><small>Understand financial concepts and choices</small><b>Ask →</b></a>
+    <a class="tool-card" href="{{ url_for('web.household', household_id=primary_household.id) }}"><span class="tool-icon">⌂</span><strong>Workspace</strong><small>Accounts, profile and household tools</small><b>Open →</b></a>
+  </section>
+  {% else %}
+  <div class="empty-state">Your personal workspace is being set up. <a href="{{ url_for('web.dashboard') }}">Refresh dashboard</a>.</div>
+  {% endif %}
+  <p class="dashboard-disclaimer">Artha AI uses information you enter and transactions you approve. Missing answers are not treated as zero, and estimates are not financial advice.</p>
+</div>
+{% endblock %}

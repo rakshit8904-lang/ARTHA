@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Portfolio · {{ household.name }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a></p>
+<h1>Manual portfolio</h1>
+<p>Record what you own and update its value yourself. No live prices, bank or broker connections, or trades are involved.</p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+{% if rows %}
+<section class="card"><h2>Your entered totals</h2>
+<div class="grid">
+<div><h3>Invested amount</h3><p class="stat">{{ money(invested) }}</p></div>
+<div><h3>Manual current value</h3><p class="stat">{{ money(current) }}</p></div>
+<div><h3>Value minus invested</h3><p class="stat">{{ money(current-invested) }}</p></div>
+</div>
+<p>Simple change relative to invested amount: {% if invested %}{{ '%.2f'|format((current-invested)*100/invested) }}%{% else %}not defined with zero invested amount{% endif %}.</p>
+<p>Valuation dates: {{ dates[0].isoformat() }}{% if dates|length > 1 %} to {{ dates[-1].isoformat() }}. These totals combine different valuation dates{% endif %}.</p>
+<p class="muted">Values may be out of date. This simple difference excludes dividends, withdrawals, fees and taxes unless reflected in your entries; it is not an annualized or total-return measure.</p>
+</section>
+<h2>Holdings</h2>
+<div class="grid">{% for item in rows %}<article class="card portfolio-holding">
+<h3>{{ item.asset_name }}</h3><p>{{ types[item.asset_type] }} · Quantity {{ item.quantity }}</p>
+<dl><dt>Invested</dt><dd>{{ money(item.invested_minor) }}</dd><dt>Manual current value</dt><dd>{{ money(item.current_value_minor) }}</dd>
+<dt>Difference</dt><dd>{{ money(item.current_value_minor-item.invested_minor) }}</dd>
+<dt>Valued on</dt><dd>{{ item.as_of_date.isoformat() }}</dd></dl>
+{% if item.notes %}<p class="portfolio-note">{{ item.notes }}</p>{% endif %}
+{% if role=='owner' %}<a class="btn secondary" href="{{ url_for('portfolio.index',household_id=household.id,holding_id=item.id) }}">Edit {{ item.asset_name }}</a>{% endif %}
+</article>{% endfor %}</div>
+{% else %}<div class="card empty">No holdings recorded yet. Add a manual holding below to start.</div>{% endif %}
+{% if role=='owner' %}
+<form method="post" class="card" id="portfolio-form" action="{{ url_for('portfolio.index',household_id=household.id,holding_id=holding.id if holding else none) }}">
+<h2>{{ 'Edit holding' if holding else 'Add holding' }}</h2>
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="version" value="{{ values.get('version','') }}">
+<label for="asset_name">Asset name</label><input id="asset_name" name="asset_name" type="text" required maxlength="120" value="{{ values.get('asset_name','') }}">
+<label for="asset_type">Asset type</label><select id="asset_type" name="asset_type" required><option value="">Choose a type</option>{% for key,label in types.items() %}<option value="{{ key }}" {% if values.get('asset_type')==key %}selected{% endif %}>{{ label }}</option>{% endfor %}</select>
+<label for="quantity">Quantity or units</label><input id="quantity" name="quantity" type="number" min="0.00000001" max="999999999999" step="0.00000001" required value="{{ values.get('quantity','') }}">
+{% for key,label in [('invested_minor','Invested amount'),('current_value_minor','Manual current value')] %}<label for="{{ key }}">{{ label }} (₹)</label><input id="{{ key }}" name="{{ key }}" type="number" min="0" max="9999999999.99" step="0.01" required value="{{ values.get(key,'') }}">{% endfor %}
+<label for="as_of_date">Valuation date</label><input id="as_of_date" name="as_of_date" type="date" required value="{{ values.get('as_of_date','') }}">
+<label for="notes">Notes (optional)</label><textarea id="notes" name="notes" maxlength="500" rows="3">{{ values.get('notes','') }}</textarea>
+<p class="row-actions"><button type="submit">Save holding</button>{% if holding %}<a class="btn secondary" href="{{ url_for('portfolio.index',household_id=household.id) }}">Cancel edit</a>{% endif %}</p>
+</form>
+{% else %}<p class="muted">Only household owners can add or edit holdings.</p>{% endif %}
+{% endblock %}

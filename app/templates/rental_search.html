@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Rental search · {{ household.name }}{% endblock %}
+{% block content %}
+<h1>Find rental options</h1>
+<p class="muted">For {{ household.name }}. This creates an external web search for Magicbricks results. Artha AI does not scrape listings, verify availability, or confirm advertised prices.</p>
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">Back to household</a></p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+<section class="card">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <label for="city">City or locality</label>
+    <input id="city" name="city" type="text" maxlength="100" required placeholder="e.g. Pune, Baner" value="{{ values.get('city', '') }}">
+    <label for="max_rent">Maximum monthly rent (₹, optional)</label>
+    <input id="max_rent" name="max_rent" type="number" min="1" step="1" value="{{ values.get('max_rent', '') }}">
+    <label for="bedrooms">Bedrooms</label>
+    <select id="bedrooms" name="bedrooms">
+      <option value="any">Any</option>
+      {% for n in (1, 2, 3, 4) %}<option value="{{ n }}" {{ 'selected' if values.get('bedrooms') == n|string }}>{{ n }} BHK</option>{% endfor %}
+    </select>
+    <label for="property_type">Property type</label>
+    <select id="property_type" name="property_type">
+      {% for value, label in [('any', 'Any'), ('apartment', 'Apartment'), ('independent house', 'Independent house'), ('shared room', 'Shared room')] %}<option value="{{ value }}" {{ 'selected' if values.get('property_type', 'any') == value }}>{{ label }}</option>{% endfor %}
+    </select>
+    <p><button type="submit">Build rental search</button></p>
+  </form>
+  {% if search_url %}
+  <div class="card" aria-live="polite">
+    <h2>Search ready</h2>
+    <p>Your filters are encoded into a Google search for Magicbricks rental listings. Review results carefully; this is not a verified listing feed.</p>
+    <p><a class="btn" href="{{ search_url }}" target="_blank" rel="noopener noreferrer">Open external rental search</a></p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

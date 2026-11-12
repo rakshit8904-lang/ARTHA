@@ -1,0 +1,60 @@
+{% extends "base.html" %}{% block title %}Monthly summary · {{ household.name }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a></p>
+<h1>Monthly summary</h1>
+<form method="get" class="card"><label for="month">Month</label><input id="month" name="month" type="month" min="2000-01" max="2100-12" value="{{ month }}" required><p><button type="submit">Show month</button></p></form>
+{% if not connected %}
+<div class="card empty">The finance service is not connected yet, so no totals are shown. Totals are never estimated here.</div>
+{% elif problem %}<div class="flash error" role="alert">{{ problem }}</div>
+{% elif result %}
+<section class="card" id="summary-overview">
+<h2>{{ month }} overview</h2>
+<p><strong>{{ result.transaction_count }} approved records</strong> · Coverage: <strong>{{ result.coverage_status }}</strong></p>
+{% if result.income_minor is none %}
+<p>No approved records for this month. Income, spending and surplus are unknown.</p>
+<a href="{{ url_for('web.imports_page',household_id=household.id) }}">Review or import statements</a>
+{% else %}
+<p>These are recorded totals. Missing accounts, missing statements and unresolved entries can change the picture.</p>
+<div class="grid">
+<div><h3>Confirmed income</h3><p class="stat">{{ money(result.income_minor) }}</p></div>
+<div><h3>Net confirmed spending</h3><p class="stat">{{ money(result.expense_minor) }}</p></div>
+<div><h3>Income minus confirmed spending</h3><p class="stat">{{ money(result.cash_surplus_minor) }}</p></div>
+</div>
+<p class="muted">This difference is not your bank balance or money available to spend. Debt payments and other excluded movements have not been deducted.</p>
+<p><a href="{{ url_for('web.ledger_page',household_id=household.id,month=month) }}">View this month's ledger</a> · <a href="{{ url_for('plans.monthly',household_id=household.id,month=month) }}">View monthly budget</a></p>
+{% endif %}
+</section>
+{% if result.income_minor is not none %}
+<section class="card" id="summary-categories">
+<h2>Where recorded spending went</h2>
+<p>Purchases and fees, minus matched purchase refunds received in this month. Negative category amounts mean matched refunds exceeded recorded spending in that category.</p>
+{% if result.spending_by_category_minor %}
+<div class="table-wrap"><table><caption class="sr-only">Net spending by category</caption><thead><tr><th scope="col">Category</th><th scope="col" class="num">Net amount</th></tr></thead><tbody>
+{% for category, amount in result.spending_by_category_minor|dictsort %}<tr><th scope="row">{{ category }}</th><td class="num">{{ money(amount) }}</td></tr>{% endfor %}
+</tbody></table></div>
+{% else %}<p>No classified purchases, fees or matched refunds are recorded for this month.</p>{% endif %}
+</section>
+<section class="card" id="summary-unresolved">
+<h2>Still awaiting classification</h2>
+<p>These approved movements are saved, but are excluded from confirmed income and spending until their type is resolved.</p>
+<dl><dt>Unclassified money out</dt><dd>{{ money(result.unresolved_debits_minor|default(0)) }}</dd>
+<dt>Unclassified money in</dt><dd>{{ money(result.unresolved_credits_minor|default(0)) }}</dd></dl>
+{% if result.unresolved_debits_minor or result.unresolved_credits_minor %}<a href="{{ url_for('web.ledger_page',household_id=household.id,month=month,type='unclassified') }}">Review unclassified entries</a>
+{% else %}<p>No unclassified movements are recorded. This does not establish complete account coverage.</p>{% endif %}
+</section>
+{% if result.excluded_movements %}<section class="card" id="summary-excluded">
+<h2>Movements outside spending totals</h2>
+<p>Amounts below are recorded movement volumes, not extra expense totals. Both sides of an internal transfer can be included, and investment figures include money in and out.</p>
+<div class="table-wrap"><table><caption class="sr-only">Excluded movements</caption><thead><tr><th scope="col">Movement</th><th scope="col" class="num">Recorded amount</th></tr></thead><tbody>
+{% for key,label in [('internal_transfers_minor','Internal transfers — both sides'),('card_settlements_minor','Credit-card settlements'),('cash_withdrawals_minor','Cash withdrawals'),('investment_contributions_minor','Investment movements — in and out'),('loan_payments_minor','Loan payments'),('unmatched_refunds_minor','Refunds without a valid purchase match')] %}
+<tr><th scope="row">{{ label }}</th><td class="num">{{ money(result.excluded_movements.get(key,0)) }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p><a href="{{ url_for('web.ledger_page',household_id=household.id,month=month,type='refund') }}">Review refund entries</a></p>
+</section>{% endif %}
+{% endif %}
+<section class="card"><h2>How to read this summary</h2>
+{% if result.warnings %}<ul>{% for warning in result.warnings %}<li>{{ warning }}</li>{% endfor %}</ul>{% endif %}
+<p class="muted">Based on approved household records · Calculation {{ result.calculation_version }}</p>
+</section>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Recurring payments · {{ household.name }}{% endblock %}
+{% block content %}
+<h1>Recurring payment review</h1>
+<p class="muted">{{ household.name }} · candidates are inferred from approved debit purchases/fees only.</p>
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">Back to household</a></p>
+<div class="card"><p>Artha AI looks for similar descriptions and amounts appearing in at least three different calendar months. This is a heuristic, not proof of a subscription. You must confirm each candidate. Transfers, income, refunds and unclassified records are excluded.</p></div>
+<h2>Needs your review</h2>
+{% if candidates %}
+{% for item in candidates %}<section class="card">
+  <h3>{{ item.description }}</h3><p>{{ item.category }} · Typical amount: <strong>{{ money(item.typical_amount_minor) }}</strong></p>
+  <p>{{ item.occurrences }} matching entries across {{ item.months|length }} months: {{ item.months|join(', ') }}</p>
+  <div class="row-actions"><form method="post" action="{{ url_for('recurring.decide', household_id=household.id, fingerprint=item.fingerprint) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="choice" value="confirmed"><button type="submit" {% if role != 'owner' %}disabled{% endif %}>Confirm recurring</button></form>
+  <form method="post" action="{{ url_for('recurring.decide', household_id=household.id, fingerprint=item.fingerprint) }}"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><input type="hidden" name="choice" value="dismissed"><button class="secondary" type="submit" {% if role != 'owner' %}disabled{% endif %}>Not recurring</button></form></div>
+</section>{% endfor %}
+{% else %}<p class="muted">No candidates currently meet the three-month matching rule.</p>{% endif %}
+<h2>Confirmed recurring payments</h2>
+{% if confirmed %}<div class="table-wrap"><table><thead><tr><th>Description</th><th>Category</th><th>Typical amount</th></tr></thead><tbody>{% for item in confirmed %}<tr><td>{{ item.description }}</td><td>{{ item.category }}</td><td>{{ money(item.typical_amount_minor) }}</td></tr>{% endfor %}</tbody></table></div>{% else %}<p class="muted">Nothing has been confirmed yet.</p>{% endif %}
+{% endblock %}

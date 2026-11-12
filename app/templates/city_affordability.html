@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}City and locality cost comparison · {{ household.name }}{% endblock %}
+{% block content %}
+<div class="stitch-dashboard">
+  <p><a href="{{ url_for('web.household', household_id=household.id) }}">← {{ household.name }}</a></p>
+  <span class="stitch-eyebrow">PLAN WHERE YOU LIVE</span>
+  <h1>City & locality cost comparison</h1>
+  <p class="muted">Compare the full everyday cost of living, not rent alone. Enter estimates for the neighbourhoods you are considering. The calculator does not invent or claim verified local prices.</p>
+
+  <section class="city-tool-card">
+    <div class="panel-heading"><div><span class="stitch-eyebrow">LOCALITY COMPARISON</span><h2>Compare three neighbourhood tiers</h2></div><span class="data-chip">Monthly estimates · ₹</span></div>
+    <div class="city-context-grid">
+      <label>City<input id="compare-city" type="text" placeholder="e.g. Delhi NCR"></label>
+      <label>Household size<input id="compare-people" type="number" min="1" max="20" value="1"></label>
+    </div>
+    <p class="muted">Enter a locality name and your estimated monthly costs for each category. Leave unknown values blank. Totals include only entered categories.</p>
+    <div class="locality-grid">
+      {% for tier, title, subtitle in [('budget','Budget-friendly','Lower-cost / affordable area'),('mid','Mid-range','Moderate everyday costs'),('premium','Premium / posh','Higher-cost neighbourhood')] %}
+      <article class="locality-card" data-tier="{{ tier }}">
+        <span class="tier-label">{{ title }}</span><h3>{{ subtitle }}</h3>
+        <label>Locality name<input class="locality-name" type="text" placeholder="{% if tier == 'budget' %}e.g. Locality A{% elif tier == 'mid' %}e.g. Locality B{% else %}e.g. Locality C{% endif %}"></label>
+        <div class="cost-inputs">
+          {% for key, label in [('rent','Rent / housing'),('groceries','Groceries'),('milk_produce','Milk, fruits & vegetables'),('food','Food / dining'),('transport','Transport / fuel'),('utilities','Electricity & utilities'),('connectivity','Internet & mobile'),('healthcare','Healthcare / personal care'),('other','Other everyday spending')] %}
+          <label>{{ label }}<input type="number" min="0" step=".01" data-cost="{{ key }}" placeholder="₹"></label>
+          {% endfor %}
+        </div>
+        <div class="locality-total"><span>Estimated monthly total</span><strong class="tier-total">—</strong><small class="tier-completeness">No amounts entered</small></div>
+      </article>
+      {% endfor %}
+    </div>
+    <div class="city-total-comparison">
+      <h3>Monthly cost comparison</h3>
+      <div id="city-comparison-results" class="comparison-results"><p>Enter costs above to compare localities.</p></div>
+    </div>
+    <p class="city-disclaimer">These are user-entered scenario estimates, not market data or verified city benchmarks. Compare the same household size and time period. Actual costs vary by household, lifestyle, rent type and locality.</p>
+  </section>
+
+  <section class="city-tool-card">
+    <div class="panel-heading"><div><span class="stitch-eyebrow">DATASET BENCHMARK</span><h2>One-person rent benchmark</h2></div></div>
+    <p class="muted">The current packaged dataset supports a rent-only city benchmark. It is kept separate from the full locality calculator above because its total-cost figures are not sufficiently verified.</p>
+    {% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+    <form method="post" class="city-context-grid">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <label>Monthly take-home income (₹)<input id="monthly_income" name="monthly_income" type="number" min="1" max="100000000" step="0.01" required value="{{ income_raw }}" placeholder="e.g. 50000"></label>
+      <label>Filter cities<input id="city" name="city" type="search" maxlength="100" value="{{ query }}" placeholder="e.g. Pune, Bengaluru"></label>
+      <div class="city-submit"><button type="submit" class="btn-primary">Compare rent benchmark</button></div>
+    </form>
+    {% if results %}
+    <div class="table-wrap"><table><thead><tr><th>City</th><th>Rent / month</th><th>Share of income</th><th>After rent</th><th>Rent burden</th></tr></thead>
+    <tbody>{% for row in results %}<tr><td>{{ row.city }}</td><td>₹{{ '{:,.0f}'.format(row.rent_paise / 100) }}</td><td>{{ row.rent_share_percent }}%</td><td>{% if row.after_rent_paise >= 0 %}₹{{ '{:,.0f}'.format(row.after_rent_paise / 100) }}{% else %}-₹{{ '{:,.0f}'.format((-row.after_rent_paise) / 100) }}{% endif %}</td><td>{{ row.band }}</td></tr>{% endfor %}</tbody></table></div>
+    {% endif %}
+  </section>
+</div>
+<script src="{{ url_for('static', filename='city-comparison.js') }}" defer></script>
+{% endblock %}

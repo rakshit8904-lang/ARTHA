@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block title %}Savings calculators · {{ household.name }}{% endblock %}
+{% block content %}
+<h1>Savings calculators</h1>
+<p class="muted">For {{ household.name }}. These are planning estimates, not bank offers or personalized investment advice.</p>
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">Back to household</a></p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+<section class="card">
+  <h2>Emergency reserve</h2>
+  <p>Include only the expense categories you personally choose to treat as essential, enter their combined monthly amount, and select your own target duration. The calculator does not impose a universal target.</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="calculator" value="reserve">
+    <label for="essential_monthly_expenses">Essential monthly expenses (₹)</label>
+    <input id="essential_monthly_expenses" name="essential_monthly_expenses" type="number" min="0.01" step="0.01" required value="{{ values.get('essential_monthly_expenses', '') }}">
+    <label for="target_months">Your target (months)</label>
+    <input id="target_months" name="target_months" type="number" min="1" max="120" step="1" required value="{{ values.get('target_months', '') }}">
+    <label for="current_reserve">Current reserve (₹)</label>
+    <input id="current_reserve" name="current_reserve" type="number" min="0" step="0.01" required value="{{ values.get('current_reserve', '0') }}">
+    <label for="monthly_contribution">Monthly contribution (₹)</label>
+    <input id="monthly_contribution" name="monthly_contribution" type="number" min="0" step="0.01" required value="{{ values.get('monthly_contribution', '0') }}">
+    <p><button type="submit">Calculate reserve</button></p>
+  </form>
+  {% if reserve_result %}
+  <div class="card" aria-live="polite">
+    <h3>Reserve estimate</h3>
+    <p>Target reserve: <strong>{{ money(reserve_result.target_paise) }}</strong></p>
+    <p>Shortfall: <strong>{{ money(reserve_result.shortfall_paise) }}</strong></p>
+    <p>Funding progress: <strong>{{ reserve_result.progress_percent }}%</strong></p>
+    <p>Estimated time to target: <strong>{% if reserve_result.months_to_target is none %}Cannot estimate with a zero monthly contribution{% else %}{{ reserve_result.months_to_target }} months{% endif %}</strong></p>
+  </div>
+  {% endif %}
+</section>
+<section class="card">
+  <h2>Savings goal planner</h2>
+  <p>Plan a target such as a laptop, course fee or travel fund. This estimate assumes no interest or investment return, so it does not depend on market performance.</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="calculator" value="goal">
+    <label for="goal_amount">Goal amount (₹)</label>
+    <input id="goal_amount" name="goal_amount" type="number" min="0.01" step="0.01" required value="{{ values.get('goal_amount', '') }}">
+    <label for="current_saved">Already saved (₹)</label>
+    <input id="current_saved" name="current_saved" type="number" min="0" step="0.01" required value="{{ values.get('current_saved', '0') }}">
+    <label for="goal_monthly_contribution">Monthly contribution (₹)</label>
+    <input id="goal_monthly_contribution" name="goal_monthly_contribution" type="number" min="0" step="0.01" required value="{{ values.get('goal_monthly_contribution', '0') }}">
+    <p><button type="submit">Calculate goal timeline</button></p>
+  </form>
+  {% if goal_result %}
+  <div class="card" aria-live="polite">
+    <h3>Goal estimate</h3>
+    <p>Goal amount: <strong>{{ money(goal_result.goal_paise) }}</strong></p>
+    <p>Remaining amount: <strong>{{ money(goal_result.shortfall_paise) }}</strong></p>
+    <p>Progress: <strong>{{ goal_result.progress_percent }}%</strong></p>
+    <p>Estimated time: <strong>{% if goal_result.months_to_goal is none %}Enter a monthly contribution to estimate the timeline{% elif goal_result.months_to_goal == 0 %}Already funded{% else %}{{ goal_result.months_to_goal }} months{% endif %}</strong></p>
+  </div>
+  {% endif %}
+</section>
+<section class="card">
+  <h2>Recurring Deposit (RD) estimate</h2>
+  <p>Enter an assumed annual rate and calculation convention. Quarterly rates are converted to an equivalent monthly rate for the monthly instalment estimate. Actual bank maturity can differ because banks may use their own day-count, rounding, tax and scheme rules.</p>
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="calculator" value="rd">
+    <label for="monthly_deposit">Monthly deposit (₹)</label>
+    <input id="monthly_deposit" name="monthly_deposit" type="number" min="0.01" step="0.01" required value="{{ values.get('monthly_deposit', '') }}">
+    <label for="duration_months">Duration (months)</label>
+    <input id="duration_months" name="duration_months" type="number" min="1" max="120" step="1" required value="{{ values.get('duration_months', '') }}">
+    <label for="annual_rate">Assumed annual interest rate (%)</label>
+    <input id="annual_rate" name="annual_rate" type="number" min="0" max="100" step="0.01" required value="{{ values.get('annual_rate', '') }}">
+    <label for="compounding">Compounding convention</label>
+    <select id="compounding" name="compounding">
+      <option value="quarterly" {{ 'selected' if values.get('compounding', 'quarterly') == 'quarterly' }}>Quarterly</option>
+      <option value="monthly" {{ 'selected' if values.get('compounding') == 'monthly' }}>Monthly</option>
+    </select>
+    <label for="deposit_timing">Deposit timing</label>
+    <select id="deposit_timing" name="deposit_timing">
+      <option value="end" {{ 'selected' if values.get('deposit_timing', 'end') == 'end' }}>End of each month</option>
+      <option value="beginning" {{ 'selected' if values.get('deposit_timing') == 'beginning' }}>Beginning of each month</option>
+    </select>
+    <p><button type="submit">Calculate RD</button></p>
+  </form>
+  {% if rd_result %}
+  <div class="card" aria-live="polite">
+    <h3>RD estimate</h3>
+    <p>Total deposits: <strong>{{ money(rd_result.total_deposits_paise) }}</strong></p>
+    <p>Estimated interest: <strong>{{ money(rd_result.interest_paise) }}</strong></p>
+    <p>Estimated maturity amount: <strong>{{ money(rd_result.maturity_paise) }}</strong></p>
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

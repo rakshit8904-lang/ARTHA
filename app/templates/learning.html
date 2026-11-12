@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Financial literacy · {{ household.name }}{% endblock %}
+{% block content %}
+<h1>Financial literacy centre</h1>
+<p class="muted">Short, educational explainers for {{ household.name }}. This is general education, not personalized investment advice.</p>
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">Back to household</a></p>
+<div class="card"><h2>Inflation</h2><p>Inflation is a sustained rise in the general price level. When prices rise, the same amount of money buys fewer goods and services. A personal budget can compare changes in your own spending, but one household's spending change is not itself a measure of national inflation.</p><p><strong>Example:</strong> If a basket costs ₹1,000 and its price rises by 5%, it costs ₹1,050.</p></div>
+<div class="card"><h2>Fixed deposits (FDs) and recurring deposits (RDs)</h2><p>An FD generally places a lump sum for a chosen term. An RD generally accepts regular instalments. Both are deposit products with institution-specific rates, terms, premature-withdrawal rules and tax treatment. Check the institution's current terms and deposit-insurance rules before committing.</p></div>
+<div class="card"><h2>Mutual funds and SIPs</h2><p>A mutual fund pools money from investors and invests according to its stated mandate. A systematic investment plan (SIP) is a method of investing a fixed amount periodically; it is not a separate asset class and does not guarantee profit or protect against loss.</p></div>
+<div class="card"><h2>Risk and diversification</h2><p>Risk includes the possibility that an investment loses value or cannot be sold when needed. Diversification spreads exposure across investments, but it cannot eliminate market risk or guarantee returns. Match risk to time horizon, liquidity needs and ability to tolerate losses.</p></div>
+<div class="card"><h2>Compounding</h2><p>Compounding means returns can themselves generate returns over time. Actual outcomes depend on rates, timing, fees, taxes and product rules. Calculator estimates should never be treated as guaranteed maturity values unless they are based on verified product terms.</p></div>
+<div class="card"><h2>Emergency reserves</h2><p>An emergency reserve is liquid money set aside for unexpected needs. Choose which expenses count as essential and decide a target that fits your own circumstances. Keep liquidity and access in mind; a long lock-in product may not suit emergency money.</p></div>
+{% endblock %}

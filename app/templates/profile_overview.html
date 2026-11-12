@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Financial profile · {{ household.name }}{% endblock %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a></p>
+<h1>Financial profile</h1>
+<p>A picture of your finances that you can fill in at your own pace and update any time. Skip anything you don't have ready; it stays marked as not entered, never as zero. Saving here does not change your monthly plan, goals or recorded transactions.</p>
+<ul class="goal-cards" id="profile-sections">
+{% for key, cfg in sections.items() %}{% set s = summaries[key] %}
+<li class="goal-card" id="profile-{{ key }}">
+<a href="{{ url_for('profile.edit', household_id=household.id, section=key) }}"><strong>{{ cfg.title }}</strong></a>
+<span class="muted">{% if s.none %}You said none{% elif not s.count %}Not started. Add it when you're ready{% else %}{{ s.count }} entr{{ 'y' if s.count == 1 else 'ies' }}{% if s.unknown %}, {{ s.unknown }} amount{{ 's' if s.unknown != 1 }} not known yet{% endif %}{% endif %}</span>
+{% if s.count %}<dl>
+{% if s.monthly_minor is defined %}<dt>Per month</dt><dd>{{ money(s.monthly_minor) }}{% if s.unknown %} (partial){% endif %}</dd>
+{% else %}<dt>Known total</dt><dd>{{ money(s.total_minor) }}{% if s.unknown %} (partial){% endif %}</dd>{% endif %}
+{% if s.payments_minor %}<dt>Monthly payments</dt><dd>{{ money(s.payments_minor) }}</dd>{% endif %}
+{% if s.deposits_minor %}<dt>Monthly deposits</dt><dd>{{ money(s.deposits_minor) }}</dd>{% endif %}
+{% if s.reserve_minor %}<dt>Reserve</dt><dd>{{ money(s.reserve_minor) }}</dd>{% endif %}
+</dl>{% endif %}
+</li>{% endfor %}
+</ul>
+<p class="muted">Amounts paid every 3, 6 or 12 months are spread evenly per month here to help planning; your actual payment dates stay as entered. Private entries are included only for you and household owners.</p>
+{% endblock %}

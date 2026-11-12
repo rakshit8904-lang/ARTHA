@@ -1,0 +1,66 @@
+{% extends "base.html" %}{% block title %}Money flow · {{ household.name }}{% endblock %}
+{% macro connection(edge, p=1) -%}
+{{ url_for('web.flow_page', household_id=household.id, account=edge.account_id, direction=edge.direction, node=edge.endpoint, page=p, _anchor='connection') }}
+{%- endmacro %}
+{% block content %}
+<a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a>
+<h1>Money flow</h1>
+{% if edges %}
+<p>Arrows show where money moved. Select a connection to see its approved transactions.</p>
+{% for name, group in edges|groupby('account_name', case_sensitive=True) %}
+<section class="flow-map card" aria-label="{{ name }}">
+  <h2 class="flow-account">{{ name }}</h2>
+  <ul class="flow-branches">
+  {% for edge in group %}
+    <li><a class="flow-edge {{ edge.direction }}" href="{{ connection(edge) }}"
+           {% if selected == edge %}aria-current="true"{% endif %}>
+      <span class="flow-arrow" aria-hidden="true">{{ '←' if edge.direction == 'credit' else '→' }}</span>
+      <span><strong>{{ edge.endpoint|capitalize if edge.endpoint == edge.endpoint|lower else edge.endpoint }}</strong>
+        <small>{{ 'Money in' if edge.direction == 'credit' else 'Money out' }} · {{ edge.count }} transaction{{ 's' if edge.count != 1 }}</small></span>
+      <b>{{ money(edge.amount) }}</b>
+    </a></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% elif not confirmed %}<p>Approve a transaction to see its connection here.</p>{% endif %}
+{% if confirmed %}
+<section class="card"><h2>Confirmed transfers</h2>
+{% for debit, credit, source, destination, decision in confirmed %}
+<details><summary><strong>{{ source }} → {{ destination }}</strong> · {{ money(debit.amount_minor) }} · {{ debit.transaction_date }}</summary>
+  <p><a href="{{ url_for('web.transaction_detail', transaction_id=debit.id) }}">Debit: {{ debit.description }}</a>
+  · <a href="{{ url_for('web.transaction_detail', transaction_id=credit.id) }}">Credit: {{ credit.description }}</a></p>
+</details>{% endfor %}</section>{% endif %}
+{% if possible or pair_page > 1 %}
+<section class="card"><h2>Possible transfers</h2>
+{% for debit, credit, source, destination, decision in possible %}
+<article><h3>{{ source }} → {{ destination }} · {{ money(debit.amount_minor) }}</h3>
+  <p>{{ debit.transaction_date }} · <a href="{{ url_for('web.transaction_detail', transaction_id=debit.id) }}">Debit: {{ debit.description }}</a>
+  · <a href="{{ url_for('web.transaction_detail', transaction_id=credit.id) }}">Credit: {{ credit.description }}</a></p>
+  {% if decision == 'unsure' %}<p>Marked for later review.</p>{% endif %}
+  {% if role == 'owner' %}
+  <form method="post" action="{{ url_for('web.transfer_decision', household_id=household.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <input type="hidden" name="debit_id" value="{{ debit.id }}"><input type="hidden" name="credit_id" value="{{ credit.id }}">
+    <fieldset><legend>Was this a transfer between your accounts?</legend>
+    <button name="choice" value="confirmed">Yes, link these entries</button>
+    <button class="secondary" name="choice" value="dismissed">No</button>
+    <button class="secondary" name="choice" value="unsure">I’m not sure</button></fieldset>
+  </form>{% endif %}
+</article>{% endfor %}
+{% if pair_page > 1 %}<a href="{{ url_for('web.flow_page', household_id=household.id, pairs=pair_page-1) }}">Previous pairs</a>{% endif %}
+{% if more %}<a href="{{ url_for('web.flow_page', household_id=household.id, pairs=pair_page+1) }}">More pairs</a>{% endif %}
+</section>{% endif %}
+{% if selected %}
+<section id="connection" class="card">
+  <h2>{{ selected.account_name }} {{ '←' if selected.direction == 'credit' else '→' }} {{ selected.endpoint }}</h2>
+  <p>{{ money(selected.amount) }} across {{ selected.count }} approved transaction{{ 's' if selected.count != 1 }}.</p>
+  <ul class="spend-activity">
+    {% for row in rows %}<li><div><a href="{{ url_for('web.transaction_detail', transaction_id=row.id) }}">{{ row.description }}</a>
+      <small>{{ row.transaction_date.strftime('%d %b %Y') }}</small></div><strong>{{ money(row.amount_minor) }}</strong></li>{% endfor %}
+  </ul>
+  {% if page > 1 %}<a href="{{ connection(selected, page-1) }}">Previous transactions</a>{% endif %}
+  {% if page*25 < selected.count %}<a href="{{ connection(selected, page+1) }}">More transactions</a>{% endif %}
+</section>
+{% endif %}
+{% endblock %}

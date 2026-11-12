@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+{% block title %}Create your Artha AI account{% endblock %}
+{% block content %}
+<div class="onboarding-wrap">
+  <div class="onboarding-intro">
+    <span class="stitch-eyebrow">ARTHA AI · YOUR FINANCIAL STARTING POINT</span>
+    <h1>Build a clearer picture of your money.</h1>
+    <p>Set up your account and share the details you already know. You can skip unknown amounts and update your profile later.</p>
+  </div>
+  <form method="post" class="onboarding-card" id="signup-onboarding" novalidate>
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="onboarding-progress">
+      <div class="progress-top"><span id="step-label">ACCOUNT DETAILS</span><span id="step-count">Step 1 of 7</span></div>
+      <div class="progress-track"><span id="progress-fill"></span></div>
+      <nav class="step-pills" aria-label="Questionnaire sections">
+        <span class="current">Account</span><span>Personal</span><span>Income</span><span>Expenses</span><span>Loans</span><span>Savings</span><span>Goals</span>
+      </nav>
+    </div>
+
+    <section class="onboarding-step active" data-step="0">
+      <div class="step-heading"><span class="step-number">01</span><div><h2>Create your account</h2><p>Your account keeps your financial information private.</p></div></div>
+      <div class="form-grid">
+        <label>Full name<input name="display_name" type="text" required maxlength="120" autocomplete="name" value="{{ form.get('display_name','') }}" placeholder="Your name"></label>
+        <label>Email address<input name="email" type="email" required autocomplete="email" value="{{ form.get('email','') }}" placeholder="you@example.com"></label>
+        <label class="span-2">Password <small>At least 10 characters</small><input name="password" type="password" required minlength="10" autocomplete="new-password" placeholder="Create a secure password"></label>
+      </div>
+      <p class="form-note">After creating your account, you can review your answers and update them later in your financial profile.</p>
+    </section>
+
+    <section class="onboarding-step" data-step="1">
+      <div class="step-heading"><span class="step-number">02</span><div><h2>Personal information</h2><p>Tell us whose finances you want to organise.</p></div></div>
+      <div class="form-grid">
+        <label>Age<input name="personal_age" type="number" min="16" max="110" placeholder="e.g. 24"></label>
+        <label>Current city<input name="personal_city" type="text" maxlength="100" placeholder="e.g. Kolkata"></label>
+        <label>Planning scope<select name="personal_scope"><option value="">Choose one</option><option value="individual">Individual — my finances</option><option value="family">Family — our household finances</option></select></label>
+        <label>Employment status<select name="personal_employment"><option value="">Choose one</option><option>Student</option><option>Salaried</option><option>Self-employed</option><option>Business owner</option><option>Not currently working</option><option>Other</option></select></label>
+        <label>Housing situation<select name="personal_housing"><option value="">Choose one</option><option value="rented">Rented</option><option value="owned">Owned</option><option value="family">Living with family</option><option value="other">Other</option></select></label>
+        <label>People financially dependent on you<input name="personal_dependants" type="number" min="0" max="30" placeholder="e.g. 1"></label>
+      </div>
+    </section>
+
+    <section class="onboarding-step" data-step="2">
+      <div class="step-heading"><span class="step-number">03</span><div><h2>Income details</h2><p>Use take-home income after deductions, if known.</p></div></div>
+      <div class="form-grid">
+        <label>Primary monthly take-home income (₹)<input name="income_primary" type="number" min="0" step="0.01" placeholder="e.g. 45000"></label>
+        <label>Income frequency<select name="income_frequency"><option value="">Choose one</option><option value="monthly">Monthly</option><option value="weekly">Weekly</option><option value="fortnightly">Every two weeks</option><option value="irregular">Irregular</option></select></label>
+        <label>Additional monthly income (₹)<input name="income_additional" type="number" min="0" step="0.01" placeholder="Optional"></label>
+        <label>Income stability<select name="income_stability"><option value="">Choose one</option><option value="steady">Steady</option><option value="varies">Varies month to month</option><option value="uncertain">Uncertain</option><option value="unknown">Not sure</option></select></label>
+        <label class="span-2">Additional income sources<textarea name="income_sources" rows="2" placeholder="Freelance, family support, rental income, etc."></textarea></label>
+      </div>
+      <aside class="insight-note">Your income details help estimate planning capacity. Artha AI will not assume that irregular income is guaranteed.</aside>
+    </section>
+
+    <section class="onboarding-step" data-step="3">
+      <div class="step-heading"><span class="step-number">04</span><div><h2>Monthly expenses</h2><p>Enter your typical monthly share. Leave anything unknown blank.</p></div></div>
+      <div class="form-grid">
+        <label>Rent / housing contribution (₹)<input name="expenses_rent" type="number" min="0" step=".01" placeholder="0 if none"></label>
+        <label>Society maintenance (₹)<input name="expenses_maintenance" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Groceries — total (₹)<input name="expenses_groceries" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Milk (₹)<input name="expenses_milk" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Fruits and vegetables (₹)<input name="expenses_produce" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Other groceries (₹)<input name="expenses_other_grocery" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Food / dining out (₹)<input name="expenses_food" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Transport / fuel (₹)<input name="expenses_transport" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Electricity and utilities (₹)<input name="expenses_utilities" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Internet and mobile (₹)<input name="expenses_connectivity" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Healthcare / insurance (₹)<input name="expenses_health" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Shopping / personal care (₹)<input name="expenses_personal" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Subscriptions (₹)<input name="expenses_subscriptions" type="number" min="0" step=".01" placeholder="Monthly amount"></label>
+        <label>Other / irregular expenses (₹)<input name="expenses_other" type="number" min="0" step=".01" placeholder="Monthly equivalent, if known"></label>
+      </div>
+      <p class="form-note">Groceries are shown with their subcategories for visibility. Do not add the grocery total and its subcategories together when calculating your actual spend.</p>
+    </section>
+
+    <section class="onboarding-step" data-step="4">
+      <div class="step-heading"><span class="step-number">05</span><div><h2>Loans and liabilities</h2><p>Include the remaining balance and what is still pending, not only the original loan.</p></div></div>
+      <label class="choice-row"><input type="radio" name="loan_has" value="yes"> I have a loan or outstanding credit balance</label>
+      <label class="choice-row"><input type="radio" name="loan_has" value="no"> I do not have any loans or outstanding credit balance</label>
+      <div id="loan-fields" class="loan-fields">
+        <div class="loan-entry">
+          <div class="loan-entry-title"><strong>Loan 1</strong><span>Enter each loan separately</span></div>
+          <div class="form-grid">
+            <label>Loan type<select name="loan_1_type"><option value="">Choose one</option><option>Education loan</option><option>Home loan</option><option>Vehicle loan</option><option>Personal loan</option><option>Credit card</option><option>Loan from family / friends</option><option>Other</option></select></label>
+            <label>Lender / short description<input name="loan_1_label" type="text" placeholder="Optional"></label>
+            <label>Original loan amount (₹)<input name="loan_1_original" type="number" min="0" step=".01"></label>
+            <label>Outstanding / pending balance (₹)<input name="loan_1_outstanding" type="number" min="0" step=".01"></label>
+            <label>Monthly EMI / payment (₹)<input name="loan_1_emi" type="number" min="0" step=".01"></label>
+            <label>Pending EMIs / instalments<input name="loan_1_pending" type="number" min="0" step="1" placeholder="Number remaining, if known"></label>
+            <label>Interest rate (% yearly)<input name="loan_1_rate" type="number" min="0" max="100" step=".01"></label>
+            <label>Remaining tenure (months)<input name="loan_1_tenure" type="number" min="0" step="1"></label>
+          </div>
+        </div>
+        <p class="form-note">You can record additional loans after signup in Financial Profile. Do not include a balance twice.</p>
+      </div>
+      <label>Other pending financial commitments (₹ / month)<input name="loan_other_commitments" type="number" min="0" step=".01" placeholder="Optional"></label>
+    </section>
+
+    <section class="onboarding-step" data-step="5">
+      <div class="step-heading"><span class="step-number">06</span><div><h2>Savings and assets</h2><p>Share what you have already set aside. Estimates are okay.</p></div></div>
+      <div class="form-grid">
+        <label>Current bank savings (₹)<input name="savings_bank" type="number" min="0" step=".01"></label>
+        <label>Emergency / rainy-day reserve (₹)<input name="savings_reserve" type="number" min="0" step=".01"></label>
+        <label>Fixed deposits (₹)<input name="savings_fd" type="number" min="0" step=".01"></label>
+        <label>Recurring deposits (₹)<input name="savings_rd" type="number" min="0" step=".01"></label>
+        <label>Mutual fund value (₹)<input name="savings_mutual_funds" type="number" min="0" step=".01"></label>
+        <label>Stocks / shares value (₹)<input name="savings_stocks" type="number" min="0" step=".01"></label>
+        <label>Monthly savings / investment contribution (₹)<input name="savings_monthly_contribution" type="number" min="0" step=".01"></label>
+      </div>
+    </section>
+
+    <section class="onboarding-step" data-step="6">
+      <div class="step-heading"><span class="step-number">07</span><div><h2>Goals and lifestyle</h2><p>Tell Artha what you are working towards.</p></div></div>
+      <div class="form-grid">
+        <label>Primary financial goal<input name="goal_primary" type="text" maxlength="120" placeholder="e.g. Build an emergency fund"></label>
+        <label>Target amount (₹)<input name="goal_amount" type="number" min="0" step=".01"></label>
+        <label>Target month<input name="goal_month" type="month"></label>
+        <label>Monthly amount you hope to set aside (₹)<input name="goal_monthly" type="number" min="0" step=".01"></label>
+        <label class="span-2">Other goals / financial priorities<textarea name="goal_other" rows="3" placeholder="Education, moving city, family support, travel, purchase, etc."></textarea></label>
+      </div>
+      <div class="review-box"><strong>Your information stays attached to your account.</strong><p>You can update your financial profile later. Unknown answers remain blank; they are not treated as zero.</p></div>
+      <label class="consent-line"><input type="checkbox" name="goal_confirm" value="yes" required> I confirm that these are the details I want to provide for my initial financial profile.</label>
+    </section>
+
+    <div class="onboarding-actions">
+      <button type="button" class="btn-secondary" id="step-back" disabled>Back</button>
+      <span class="actions-spacer"></span>
+      <button type="button" class="btn-primary" id="step-next">Continue <span>→</span></button>
+      <button type="submit" class="btn-primary" id="step-submit" hidden>Create account <span>→</span></button>
+    </div>
+  </form>
+  <p class="signin-prompt">Already registered? <a href="{{ url_for('web.login') }}">Sign in</a></p>
+</div>
+<script>
+(() => {
+  const form = document.getElementById('signup-onboarding');
+  if (!form) return;
+  const steps = [...form.querySelectorAll('.onboarding-step')];
+  const pills = [...form.querySelectorAll('.step-pills span')];
+  const back = document.getElementById('step-back');
+  const next = document.getElementById('step-next');
+  const submit = document.getElementById('step-submit');
+  const fill = document.getElementById('progress-fill');
+  const count = document.getElementById('step-count');
+  const label = document.getElementById('step-label');
+  const titles = ['ACCOUNT DETAILS','PERSONAL INFORMATION','INCOME DETAILS','MONTHLY EXPENSES','LOANS & LIABILITIES','SAVINGS & ASSETS','GOALS & LIFESTYLE'];
+  let current = 0;
+  function show(index) {
+    current = index;
+    steps.forEach((step, i) => step.classList.toggle('active', i === index));
+    pills.forEach((pill, i) => { pill.classList.toggle('current', i === index); pill.classList.toggle('done', i < index); });
+    back.disabled = index === 0;
+    next.hidden = index === steps.length - 1;
+    submit.hidden = index !== steps.length - 1;
+    fill.style.width = `${((index + 1) / steps.length) * 100}%`;
+    count.textContent = `Step ${index + 1} of ${steps.length}`;
+    label.textContent = titles[index];
+    if (index === 4) toggleLoans();
+  }
+  function validCurrent() {
+    const required = [...steps[current].querySelectorAll('[required]')];
+    for (const field of required) {
+      if (!field.checkValidity()) { field.reportValidity(); field.focus(); return false; }
+    }
+    return true;
+  }
+  function toggleLoans() {
+    const answer = form.querySelector('input[name="loan_has"]:checked');
+    document.getElementById('loan-fields').hidden = answer?.value === 'no';
+  }
+  form.querySelectorAll('input[name="loan_has"]').forEach(el => el.addEventListener('change', toggleLoans));
+  back.addEventListener('click', () => show(Math.max(0, current - 1)));
+  next.addEventListener('click', () => { if (validCurrent()) show(Math.min(steps.length - 1, current + 1)); });
+  form.addEventListener('submit', e => { if (!validCurrent()) e.preventDefault(); });
+  show(0);
+})();
+</script>
+{% endblock %}

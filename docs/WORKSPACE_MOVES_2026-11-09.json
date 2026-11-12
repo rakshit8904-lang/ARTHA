@@ -1,0 +1,2252 @@
+[
+  {
+    "original": "outputs\\portfolio_20261109\\browser_check.py",
+    "current": "outputs\\QA\\portfolio_20261109\\browser_check.py",
+    "bytes": 3500,
+    "sha256": "DE1BF37873E874CF173677C9A7B90640A8E584D65AE2E1908533D2C0D6274EE6"
+  },
+  {
+    "original": "outputs\\portfolio_20261109\\portfolio-1280.png",
+    "current": "outputs\\QA\\portfolio_20261109\\portfolio-1280.png",
+    "bytes": 94497,
+    "sha256": "036A7B7B911AEF27C94438EA8805CC0DAC9E88C57F4B9A88A783C25215E16CBE"
+  },
+  {
+    "original": "outputs\\portfolio_20261109\\portfolio-360.png",
+    "current": "outputs\\QA\\portfolio_20261109\\portfolio-360.png",
+    "bytes": 76660,
+    "sha256": "F928BD0AE304A7FDA02D4903D2A9A0959A48D4DD928732EB2331CD0A4EA22F3A"
+  },
+  {
+    "original": "outputs\\portfolio_20261109\\portfolio-390.png",
+    "current": "outputs\\QA\\portfolio_20261109\\portfolio-390.png",
+    "bytes": 90555,
+    "sha256": "32ADA21C23D5B5DF71DE24735BADC3EB14C20F423F706326D60EFE79F521DCEF"
+  },
+  {
+    "original": "outputs\\portfolio_20261109\\results.json",
+    "current": "outputs\\QA\\portfolio_20261109\\results.json",
+    "bytes": 505,
+    "sha256": "0C399E620AFE8BA07C482194A186283812ACBB3C21EB1AF4411D5183BF9C7040"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\browser_check.py",
+    "current": "outputs\\QA\\relocation_20261109\\browser_check.py",
+    "bytes": 4695,
+    "sha256": "71C4EA3EDC36C8A837FE26DD3296080C648951459716E4CDF92657C3BF1D8C35"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\browser_results.json",
+    "current": "outputs\\QA\\relocation_20261109\\browser_results.json",
+    "bytes": 580,
+    "sha256": "B3EC4E61F87A217C0AECB9A1C2A1E33D7686EDA09DCBB08C58A9DE5AC47BB29C"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\results-1280.png",
+    "current": "outputs\\QA\\relocation_20261109\\results-1280.png",
+    "bytes": 42500,
+    "sha256": "DE753EF4747B7FC3291E38DB2C5F131CFD10AE7227A184F3B75F2E33BC5DB41C"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\results-360.png",
+    "current": "outputs\\QA\\relocation_20261109\\results-360.png",
+    "bytes": 47231,
+    "sha256": "943CB10EF0873405CACEB29AF2D22445930B5F20DE54AA1DDD9C56DBBDED9D15"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\results-390.png",
+    "current": "outputs\\QA\\relocation_20261109\\results-390.png",
+    "bytes": 47183,
+    "sha256": "9AC9B246FD6953BC39D617EA1E53926A4B85C1752BA92D306ED59EBBA4298328"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\scenario-1280.png",
+    "current": "outputs\\QA\\relocation_20261109\\scenario-1280.png",
+    "bytes": 161398,
+    "sha256": "C8B61344D58C10EBD929418A934A9B0348A484093F73B44E35F6A246FFBB3BA4"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\scenario-360.png",
+    "current": "outputs\\QA\\relocation_20261109\\scenario-360.png",
+    "bytes": 155039,
+    "sha256": "39A1163D7CAB8E24ACBB056EB255620D15468E2E51CBF8F5AAD89DC3101C7D50"
+  },
+  {
+    "original": "outputs\\relocation_20261109\\scenario-390.png",
+    "current": "outputs\\QA\\relocation_20261109\\scenario-390.png",
+    "bytes": 154272,
+    "sha256": "27C022394DC378414E8021594100D27749C0C257937D9E286C13D1B95281D858"
+  },
+  {
+    "original": "outputs\\summary_20261109\\browser_check.py",
+    "current": "outputs\\QA\\summary_20261109\\browser_check.py",
+    "bytes": 3621,
+    "sha256": "F24D22ED1E823CDC8E14493B1D8ACC3A26DEDE9D15687E3A64268AB47EC72583"
+  },
+  {
+    "original": "outputs\\summary_20261109\\results.json",
+    "current": "outputs\\QA\\summary_20261109\\results.json",
+    "bytes": 481,
+    "sha256": "6F24B2DB2A94A800EDACFC8B52C360D234890FB2350BB6F6ACBEA37324AD41FF"
+  },
+  {
+    "original": "outputs\\summary_20261109\\summary-1280.png",
+    "current": "outputs\\QA\\summary_20261109\\summary-1280.png",
+    "bytes": 130158,
+    "sha256": "32B2CDC75A5077E4784C60E4DA5768424D2EFAC811D8DECC469627FF25D27044"
+  },
+  {
+    "original": "outputs\\summary_20261109\\summary-360.png",
+    "current": "outputs\\QA\\summary_20261109\\summary-360.png",
+    "bytes": 129646,
+    "sha256": "06C86C12ADBA4C19931163A5F99833354B913D52EFE95B44E06EC1AEB2DDD299"
+  },
+  {
+    "original": "outputs\\summary_20261109\\summary-390.png",
+    "current": "outputs\\QA\\summary_20261109\\summary-390.png",
+    "bytes": 127372,
+    "sha256": "ADF93430E98C3B1845C11039329F0F818FF3EBD8844553936325A4F7E310C273"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\final-12.png",
+    "current": "outputs\\QA\\handover_20261107\\final-12.png",
+    "bytes": 209905,
+    "sha256": "B2C47430B4148D764A1890F877C335263EA7B49EC0F0DBFDFA55D0D89877381E"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\final-13.png",
+    "current": "outputs\\QA\\handover_20261107\\final-13.png",
+    "bytes": 243137,
+    "sha256": "540420048E0D4423F7DFBC9A7AE4F6282D7CB049B6913E2CB869F544E1EF2C5D"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\final-14.png",
+    "current": "outputs\\QA\\handover_20261107\\final-14.png",
+    "bytes": 159751,
+    "sha256": "6E19F216C1806815014FCA95436D8CFFFA54A2B49168C2FC241EF034A97FDC00"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-01.png",
+    "current": "outputs\\QA\\handover_20261107\\page-01.png",
+    "bytes": 213706,
+    "sha256": "3D86B9527AD9823461363037B6E45BEAF660B4DCE5BFEBC63A11934D27546B66"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-02.png",
+    "current": "outputs\\QA\\handover_20261107\\page-02.png",
+    "bytes": 156645,
+    "sha256": "F8735B4A1ED72895BA6CCEA626D1BA858167719BB5E3DF52ACD875214380F1FA"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-03.png",
+    "current": "outputs\\QA\\handover_20261107\\page-03.png",
+    "bytes": 144895,
+    "sha256": "EBDEFEB46C1D96B144DA9840F2E3EA26AC4AF57E0691BBA0C210BBBCA3FC560A"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-04.png",
+    "current": "outputs\\QA\\handover_20261107\\page-04.png",
+    "bytes": 227928,
+    "sha256": "D7B00E4A97E0F5E69F2F738757E1EF8BA8E3BE459865863C3546A7CD6EB48476"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-05.png",
+    "current": "outputs\\QA\\handover_20261107\\page-05.png",
+    "bytes": 242893,
+    "sha256": "0AA1902D93FAFA74F00368F1EB278D61EC56B62F758BDB4B402A00C4C214ACDA"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-06.png",
+    "current": "outputs\\QA\\handover_20261107\\page-06.png",
+    "bytes": 226898,
+    "sha256": "17C364F5BD2BB44AB715EDB6DD3CC146BAE26D619906F7A33382BA62726FA936"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-07.png",
+    "current": "outputs\\QA\\handover_20261107\\page-07.png",
+    "bytes": 233697,
+    "sha256": "7DD664BB8E058D0C0B0C66415A7CFC2274FDB7E795FD0ED13BB8B1B58091370B"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-08.png",
+    "current": "outputs\\QA\\handover_20261107\\page-08.png",
+    "bytes": 192457,
+    "sha256": "B43CD8F6BE9719C490029FAD5EA2EAF95EF3E4BC7970B30FE8101E98780E03B7"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-09.png",
+    "current": "outputs\\QA\\handover_20261107\\page-09.png",
+    "bytes": 237156,
+    "sha256": "9964FBE1C8F5661D8095937ECC884B8D2A03ABCCD3019864C04E34167D0B66D4"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-10.png",
+    "current": "outputs\\QA\\handover_20261107\\page-10.png",
+    "bytes": 254055,
+    "sha256": "C108709E12934183F190C1370BF0343EA61DF04A849DE8C8A5B428F2A9784215"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-11.png",
+    "current": "outputs\\QA\\handover_20261107\\page-11.png",
+    "bytes": 227144,
+    "sha256": "2C601DEED635BAF1AACD7A335E900BA8640B6BB7EB427373CEB4AE951ACD2918"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-12.png",
+    "current": "outputs\\QA\\handover_20261107\\page-12.png",
+    "bytes": 210478,
+    "sha256": "7DA70B214A74ECFF898D5E0DB47F5C829EF65B65E91844051AB54B1B880E7E0E"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-13.png",
+    "current": "outputs\\QA\\handover_20261107\\page-13.png",
+    "bytes": 250224,
+    "sha256": "D4C3FC62CF8B184E1EF60E0D6284F4175FBD2785803399FE0944F2D0EB2E33E7"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\page-14.png",
+    "current": "outputs\\QA\\handover_20261107\\page-14.png",
+    "bytes": 138743,
+    "sha256": "A2CB4890BC66C9E737540DD346D840B7AF983D061FF45AA23E3AFE9B1ECB1AD5"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-01.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-01.png",
+    "bytes": 359702,
+    "sha256": "38DE29D972FBC15286F3EFCE6D7F17F7A872698DD58243319015A3A7B8577FC4"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-02.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-02.png",
+    "bytes": 394313,
+    "sha256": "0F3BA3299958373BC4891AD823EEEF2C0E1056318D9FC84EBED4746126F75166"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-03.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-03.png",
+    "bytes": 445350,
+    "sha256": "F3C02D7EED2E7A4C2E8CE852979D3CC153B0EA5315A4317AEC6A92A1333F21C4"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-04.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-04.png",
+    "bytes": 426465,
+    "sha256": "8444A1D3E2989BEE380EA2935EF3E8306B56C07A26E1235C09A6243DE7FF0CCF"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-05.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-05.png",
+    "bytes": 464570,
+    "sha256": "14176604570787A0E245C9DE322836F53D37A0E525FB1FE65730661C7D65D4AA"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-06.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-06.png",
+    "bytes": 425708,
+    "sha256": "84272F92122407AD2D7AFB2B2C83622CBF8AAF7D509E0E1DF4ADE3DD2369E5A8"
+  },
+  {
+    "original": "outputs\\teammate_handover\\qa\\pair-07.png",
+    "current": "outputs\\QA\\handover_20261107\\pair-07.png",
+    "bytes": 371922,
+    "sha256": "608E6A82086D8D930BB417BD9CB5C69602AB3586DE409DD400DE22C0C83B1360"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\browser_qa\\calculators-1280.png",
+    "current": "outputs\\QA\\biswa_20261109\\calculators-1280.png",
+    "bytes": 102202,
+    "sha256": "40299193D130321998460069DC7A73DFD623E29C54F5B4BE122E4264C2DCBD5C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\browser_qa\\calculators-390.png",
+    "current": "outputs\\QA\\biswa_20261109\\calculators-390.png",
+    "bytes": 93680,
+    "sha256": "CB227064065D4565B2C07D36197D171A379183A180D42C2E8D98D58962C06C06"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\browser_qa\\city-1280.png",
+    "current": "outputs\\QA\\biswa_20261109\\city-1280.png",
+    "bytes": 65818,
+    "sha256": "012667D51FC092C3D2FF4E47A31EEF831E2B1D58EF7FD261902C99DA7A0F67EF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\browser_qa\\city-390.png",
+    "current": "outputs\\QA\\biswa_20261109\\city-390.png",
+    "bytes": 67526,
+    "sha256": "102F72E4F25E9C57CAF9DFA851DCC8A465FC5899A9B4AA0F7F4FC84992224B36"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\browser_qa\\results.json",
+    "current": "outputs\\QA\\biswa_20261109\\results.json",
+    "bytes": 2448,
+    "sha256": "93F50743ABC079F5C5AC6AFD013C349CC4104AE127C2816C37716645E0D88891"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.env.example",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.env.example",
+    "bytes": 448,
+    "sha256": "2214164454B4E61A9F033F8995A2A7A6F5DCB900424AEE09B8E92B65C585E157"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.gitignore",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.gitignore",
+    "bytes": 212,
+    "sha256": "7870BBAF6B20B08933BC31F47D26C1085F59219BE0B7829F70903667772659B2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\alembic.ini",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\alembic.ini",
+    "bytes": 347,
+    "sha256": "3D58176AF71BE756004981D8FE3D72268C3D827C98FF16C549CA3F692EB23AA8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\DEVELOPMENT_PROGRESS_2026-11-08.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\DEVELOPMENT_PROGRESS_2026-11-08.md",
+    "bytes": 6761,
+    "sha256": "96770193FA2FFF08AC85A7A6906979C99C23612170A0C987F4410DA0D3A2B69F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\Procfile",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\Procfile",
+    "bytes": 115,
+    "sha256": "A2080B939E9D481141CFF534F888D2845822BBDE3ABB071CED9EE0D7A7CA36C0"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\pytest.ini",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\pytest.ini",
+    "bytes": 31,
+    "sha256": "CE4E1A49611A7F36D40C50957C5ABD86F8FE9A69E482C21EF7E2EC51A92D4B52"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\README.md",
+    "bytes": 8245,
+    "sha256": "CB72661A3B5CCAEBB603B143473E60902EC0B2FD3FD28EBC1FEA09130D5B631A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\requirements-app.txt",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\requirements-app.txt",
+    "bytes": 184,
+    "sha256": "8F2FE8DA263EBC7627F8D7BD240FD92B59C9A5FCE1B61963C7DE004BDBEDCD09"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\requirements.txt",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\requirements.txt",
+    "bytes": 58,
+    "sha256": "878DE5070AF14739FB2F331A67D135AEDE0F55D88B4D279342374703D12310EC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\wsgi.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\wsgi.py",
+    "bytes": 103,
+    "sha256": "68DADDBEC09371EE92DD40E50E38EA56F13C1AF6F29F13456ED111D9E2141CA9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.pytest_cache\\.gitignore",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.pytest_cache\\.gitignore",
+    "bytes": 37,
+    "sha256": "3ED731B65D06150C138E2DADB0BE0697550888A6B47EB8C45ECC9ADBA8B8E9BD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.pytest_cache\\CACHEDIR.TAG",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.pytest_cache\\CACHEDIR.TAG",
+    "bytes": 191,
+    "sha256": "37DC88EF9A0ABEDDBE81053A6DD8FDFB13AFB613045EA1EB4A5C815A74A3BDE4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.pytest_cache\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.pytest_cache\\README.md",
+    "bytes": 302,
+    "sha256": "73FD6FCCDD802C419A6B2D983D6C3173B7DA97558AC4B589EDEC2DFE443DB9AD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.pytest_cache\\v\\cache\\lastfailed",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.pytest_cache\\v\\cache\\lastfailed",
+    "bytes": 2,
+    "sha256": "44136FA355B3678A1146AD16F7E8649E94FB4FC21FE77E8310C060F61CAAFF8A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\.pytest_cache\\v\\cache\\nodeids",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\.pytest_cache\\v\\cache\\nodeids",
+    "bytes": 12981,
+    "sha256": "6A58981D72E4FC7BD4D2C8186F1C143B6F046F8412FCAAA25F83D71B0D3DE195"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__init__.py",
+    "bytes": 7426,
+    "sha256": "13244490A587B992038680395B9C18C69439BCC1A2141BB32ED2EBFFD7D3BCC5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\config.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\config.py",
+    "bytes": 5917,
+    "sha256": "65EE718F7FAE1854F5CA9B612C773106BE92A3978EBD06525C8956835119BE23"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\constants.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\constants.py",
+    "bytes": 2025,
+    "sha256": "9FD017084D1ABF3313B3FAC201D6E6680088C300B068E8AC15F34CCB37A6ED46"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\errors.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\errors.py",
+    "bytes": 1815,
+    "sha256": "182ECEDA34CFF60CAABD630B516F8DF8057C1A1C39129746CF621AEEEC5C3EFA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\extensions.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\extensions.py",
+    "bytes": 485,
+    "sha256": "82BFB35D7F288D4A36D97B23BEC97B9062E1E97C90004E7DCED13D408517B4DA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\models.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\models.py",
+    "bytes": 15774,
+    "sha256": "CF35E0670A69F05B16277F2B8AC18FE959AB899EF39637A7C2BFCC0940820DBC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\session.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\session.py",
+    "bytes": 2345,
+    "sha256": "01A8756AB494A0A91107D8E64AB4580814E24EABEEAB560C837B37F8C51EA8F8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\routes.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\routes.py",
+    "bytes": 13503,
+    "sha256": "31A5F276930BD7F80FF29CB6EA996E1F09BAA5E3B91A1A71319F89057CB11938"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\serializers.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\serializers.py",
+    "bytes": 2560,
+    "sha256": "5ACB5ECEED3701447F52BA7341AC00792B4B9678E4C6F4EE2ADE13E4E1A3394F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 202,
+    "sha256": "61125367F9A236C862A83C894EB8F4380225805707F3A3D5F91E436ECEC310CF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\__pycache__\\routes.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\__pycache__\\routes.cpython-314.pyc",
+    "bytes": 25313,
+    "sha256": "4566FDF248B569CF0A9F21445E0F7856D0B6DD347582F67E008CEB72B5B92D89"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\api\\__pycache__\\serializers.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\api\\__pycache__\\serializers.cpython-314.pyc",
+    "bytes": 4500,
+    "sha256": "A0C417BF3AB2945EAFBA9EEA56EF7517D08DA1C7D57A18F2FE3F8A0F2542457D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\context.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\context.py",
+    "bytes": 360,
+    "sha256": "C04F72F99A890BF4620E3683441F03B0207080FC0F6E26B90675549E2C4002EF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\mailer.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\mailer.py",
+    "bytes": 1796,
+    "sha256": "1E3F5ADB3BDA8AB496294F03053C49C73170E116DDD132B2106218604F13096D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\service.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\service.py",
+    "bytes": 6475,
+    "sha256": "A5462A60890AB624324898B34E69C18CFCE283F949061378FA7440F759A7CA76"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\supabase.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\supabase.py",
+    "bytes": 5940,
+    "sha256": "3F5FD4AB94CDC33EBC1EC6063B384A8063A1A0212DE11E4618903C73FD301A80"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 203,
+    "sha256": "C503229E6403EB486FF161B843D597BAF272EBC8A5F5902B0CD5AF89EACF6CF4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__pycache__\\context.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__pycache__\\context.cpython-314.pyc",
+    "bytes": 1109,
+    "sha256": "90131EA1E35AA9040A3FD7864827ABD88CB383BA1CB92BAB3E668A5642F852B3"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__pycache__\\mailer.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__pycache__\\mailer.cpython-314.pyc",
+    "bytes": 3120,
+    "sha256": "C6FEB87D3ABF30B362D7FF6E3F2E819FCA8595D13E188C7FEA2A2CB0185D609F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__pycache__\\service.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__pycache__\\service.cpython-314.pyc",
+    "bytes": 9830,
+    "sha256": "D684ECF533C32D8D43BC4AD9A91BB726AD102571AF32E669BBADCAAAC2CA9D9C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\auth\\__pycache__\\supabase.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\auth\\__pycache__\\supabase.cpython-314.pyc",
+    "bytes": 9507,
+    "sha256": "12D1EBC5EED1312FF97C1FEBB0E517366EB49CD24DA863660B9E893D29649C95"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\cities\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\cities\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\cities\\affordability.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\cities\\affordability.py",
+    "bytes": 4246,
+    "sha256": "E5C46A0FDAAC2F1B14629961215CD9B7816046E911A3CFE45CC541EF7E36BFD8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\cities\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\cities\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 205,
+    "sha256": "1BF3E8A33AB0219CBF0877ED1518DDE6990E9C98DF49CBA5FB5C606A885400F1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\cities\\__pycache__\\affordability.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\cities\\__pycache__\\affordability.cpython-314.pyc",
+    "bytes": 7253,
+    "sha256": "51795BDDDD1D4B219C038D082BB8B034DF76E5D74E9753BCA816CF3A3AD48013"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\accounts.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\accounts.py",
+    "bytes": 2878,
+    "sha256": "2615E64AFF5D3A80E1C5FE2F12E37F2A4993FD348955BA903D8F5FE5EB37E339"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\calculations.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\calculations.py",
+    "bytes": 6022,
+    "sha256": "DC8E6D7E4DD58925D4FC0E2DBF0483ABE92A1DE4A1BA9095CFB794322436527E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\calculator_routes.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\calculator_routes.py",
+    "bytes": 2468,
+    "sha256": "AD273831016B30E17DB53DB1642D7ABA345569F521864F8839456A2BB6538B45"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\plans.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\plans.py",
+    "bytes": 7663,
+    "sha256": "9DD613FDF66355C60DE7C8BBE73804599617E68674631398BC356B20488011D0"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\recurring.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\recurring.py",
+    "bytes": 4739,
+    "sha256": "E6C5EBFCD1CDEFB5BD427F3C0D9C69860AECAB5AFAF8EF831C5058D8F2E53AD9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\relocation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\relocation.py",
+    "bytes": 1830,
+    "sha256": "6B23E6CA0003CF74989839BDBC1EFCD405C719995C056B35F99AC857E282276F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\service.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\service.py",
+    "bytes": 3235,
+    "sha256": "0C0602BD0F89B60E69372AAA51B4AE2F485E2B5A97322529D56C19087B1D3DA6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 209,
+    "sha256": "1F6F6660915B70DFD092ED00167DB45D82E50D8D514CDDB90122DE3BD335D1C8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\accounts.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\accounts.cpython-314.pyc",
+    "bytes": 3999,
+    "sha256": "EBD4350533AAD2F0D51DC9F10D0F2BBF9B54AAD69FC344EDA86EDE1EB586C199"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\calculations.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\calculations.cpython-314.pyc",
+    "bytes": 7897,
+    "sha256": "DCC125A3A7704A4ECAABB58684FDAB04267996C2177437E3CC79D79148EAC32D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\calculator_routes.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\calculator_routes.cpython-314.pyc",
+    "bytes": 3609,
+    "sha256": "4AE8057D4A5AF9A33AB794E1CC55C802144BC03D692D1D7DC15CDBB2D524B7BE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\plans.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\plans.cpython-314.pyc",
+    "bytes": 11105,
+    "sha256": "75B92D9BD13E6410C73D06A2F4BCB28EF0EE48ACF65F8427C3C4BA94C9F8EC45"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\recurring.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\recurring.cpython-314.pyc",
+    "bytes": 7769,
+    "sha256": "2C492B43C39974A191E6A1C25B1975E55FAE5496ADC25E7F58521112D2F05D08"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\relocation.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\relocation.cpython-314.pyc",
+    "bytes": 2350,
+    "sha256": "8344D1383DC99AB3087353759414683EF7F684994F6F8754284D80F51B458F0C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\households\\__pycache__\\service.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\households\\__pycache__\\service.cpython-314.pyc",
+    "bytes": 5271,
+    "sha256": "FE3B9F304033E56542ADC30B6933246764CFE8A79DA94390C3EB9D900E2FA7A1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\csv_parser.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\csv_parser.py",
+    "bytes": 12557,
+    "sha256": "0CC1A388777B89490482D07B943F7B9E2532F1FA286DBB2F6E268BD83C3DE328"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\excel.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\excel.py",
+    "bytes": 2676,
+    "sha256": "04055993BEB9B517FB65A3265BB0D7196C1F42E85A462D008BDB63784DE3342E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\expiry.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\expiry.py",
+    "bytes": 2325,
+    "sha256": "8D54CB508F010B2DFCB0F33DAAF26E6BEF13949C4540A6DA7DC7ED423B4AC73D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\review.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\review.py",
+    "bytes": 10646,
+    "sha256": "DD228A29EFF4850B9030804BFE50ED85CDE1D6536271BD8F0BFA980A4E043BCB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\service.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\service.py",
+    "bytes": 10152,
+    "sha256": "CB440FA85FEBEE8F27B14DF2828BD21B384A1F050F23F24AD95741D94C6813B8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\storage.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\storage.py",
+    "bytes": 2296,
+    "sha256": "75C09F0C5909DBF1600CD2E211422F1568F14C81917ACAAAF3ECCE5B0E010043"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 206,
+    "sha256": "45FDE86574685F97149E0563C31751BF51CF1FBBC8D2885E09474EB99BD3E520"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\csv_parser.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\csv_parser.cpython-314.pyc",
+    "bytes": 16029,
+    "sha256": "3D49FCE13A81BB5ACB473963FF981AC0FBCE5DC4A0374F0C5E39063C6A6F024D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\excel.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\excel.cpython-314.pyc",
+    "bytes": 4288,
+    "sha256": "3AD4DC5A430C5D9D98FAB5F1E6CF84B38C5EAF5D21861D9F1125E002045D2BA5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\expiry.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\expiry.cpython-314.pyc",
+    "bytes": 4380,
+    "sha256": "49B9D66E73935898688F130AAE2AB672AA191447BD655747D0E321567B6C22C2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\review.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\review.cpython-314.pyc",
+    "bytes": 14165,
+    "sha256": "093E14FC7943FA465974E1BBC6F532DBF7D67DE805C85587268DBEFD99E17AEC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\imports\\__pycache__\\service.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\imports\\__pycache__\\service.cpython-314.pyc",
+    "bytes": 15698,
+    "sha256": "4AD01D43F295A810DFA2BBAF7D7CCC4A843871BA86D6383F4C14EB3FB33BB1B2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\categories.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\categories.py",
+    "bytes": 1368,
+    "sha256": "4126965660F92A887858030BDF959F1ECD5039AA324B2B571DDB4C081910EC85"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\finance.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\finance.py",
+    "bytes": 1720,
+    "sha256": "E06C02F6CD004F722D582DC4739D404DF9FC848866B9302C3758A45DFCCDF1AF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\ledger_finance.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\ledger_finance.py",
+    "bytes": 3736,
+    "sha256": "9A7339386E4A5335B92C5A16F41E27A624D91BED5D1D3811A5E4ED9683AAB5CB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\Linear_SVM.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\Linear_SVM.joblib",
+    "bytes": 140048,
+    "sha256": "9820D9A24A5E3B6A969A8BA17EF0F205256BB00D81301AF9290E55BE73F73176"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 211,
+    "sha256": "9DC2FAB49F25460AC04C58DB0D3C959D46198289CA127F509232A82A1BDD96C8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\__pycache__\\categories.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\__pycache__\\categories.cpython-314.pyc",
+    "bytes": 2767,
+    "sha256": "ED7AA61F7FF80CFB9147E1D53A0177E1D5C6EF1F17575102B97ED775A4FB6D7F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\__pycache__\\finance.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\__pycache__\\finance.cpython-314.pyc",
+    "bytes": 2316,
+    "sha256": "DF2BF2E544757FDD803DB79E1E2488EBE1C8ADDA07F954DF1D01E59CE9816CE8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\integrations\\__pycache__\\ledger_finance.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\integrations\\__pycache__\\ledger_finance.cpython-314.pyc",
+    "bytes": 5677,
+    "sha256": "C00D5B546957D1E4D4E803EB16AA097CF8B8E0BC5185B8100343C82F4895080A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\flow.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\flow.py",
+    "bytes": 2162,
+    "sha256": "4614A68770F2E90996BE29B4E5FD8A8CFD32309FA3E7796C1E6AD5BD89A8CC74"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\service.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\service.py",
+    "bytes": 8725,
+    "sha256": "D5B583DA6F6E19248C0F26BD2DEDD53127DCA6BF5E6913F8C099D6A68053B149"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\transfers.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\transfers.py",
+    "bytes": 4166,
+    "sha256": "235FC342C68FBFD9FD4BB6E3954EB2A1D52AB5199DA7CA429F46995C6101E6FF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 205,
+    "sha256": "4271598D2B6DEF88D4B892293963A85D717F30ABB65C2291556D3637D80EEBF9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\__pycache__\\flow.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\__pycache__\\flow.cpython-314.pyc",
+    "bytes": 4119,
+    "sha256": "D70BAA3916D943112E45CA72C2D104A7EC557C08D6FFF903E8E3306C88675DB9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\__pycache__\\service.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\__pycache__\\service.cpython-314.pyc",
+    "bytes": 12056,
+    "sha256": "CF79D70E2779C7F14B24529E1EB60188A554420270B7970B3171DE520F5D6CB6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\ledger\\__pycache__\\transfers.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\ledger\\__pycache__\\transfers.cpython-314.pyc",
+    "bytes": 7137,
+    "sha256": "CA7FDC69EE875A7EA163AEE376A06E158E1EE82455E9DFF564AF2FDAB33C647C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\security\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\security\\__init__.py",
+    "bytes": 71,
+    "sha256": "63C3D93B0991A8DE10FFC93F1F1D78147FCC67BC5FC6DAAD5B65237AAC9A65C5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\security\\rate_limiter.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\security\\rate_limiter.py",
+    "bytes": 4325,
+    "sha256": "09FB4BECF014FF806214B5F12A47FC9E2E4653E7BC57A057276D4F4E72802CD4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\security\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\security\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 283,
+    "sha256": "A8FCB5D28EDC59F771D490091B06F08CB9974BEC56516136DB20C7790683A82F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\security\\__pycache__\\rate_limiter.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\security\\__pycache__\\rate_limiter.cpython-314.pyc",
+    "bytes": 6683,
+    "sha256": "1FFE4B719E42C6DF5A4D898E29BF9153219D444C08267A3327C75F84ED7B02FE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\static\\app.css",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\static\\app.css",
+    "bytes": 5648,
+    "sha256": "10389CFDE4FFCC0FD55F2413081D52561B51C67E4160A8512C4CF712A5CF1757"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\static\\app.js",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\static\\app.js",
+    "bytes": 5247,
+    "sha256": "A890A4342DD6319E34591AD621576B5538CF1CDE2105A94594AAD4824C2BC3AA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\allocation.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\allocation.html",
+    "bytes": 2438,
+    "sha256": "410DD03D0B970C9603B1C375DC92AD3D86D746240BD54B36E9FBACC822D7557D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\base.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\base.html",
+    "bytes": 1258,
+    "sha256": "A2B4353DF85F745A1EFA5CDB43E0D4A01F5ED494048DC1EE5D6E62C013C21B86"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\calculators.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\calculators.html",
+    "bytes": 6507,
+    "sha256": "A358188FEEB08C889C771F041C4E2300663794AA9098DB85A0DF3B653A5C3DAF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\city_affordability.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\city_affordability.html",
+    "bytes": 2745,
+    "sha256": "00496836F3AC560AF18938F0BFA93017879EF149B4B3A21FAFB3F241915BE17B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\dashboard.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\dashboard.html",
+    "bytes": 994,
+    "sha256": "F994D9A7AABCA07DA4052D194F93359BF3F96B6BC780DB2360690BC59CE60287"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\error.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\error.html",
+    "bytes": 200,
+    "sha256": "D953B7B88B748725844B46B51851DD266DB60466C8F49862D83079AF4829ADFA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\household.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\household.html",
+    "bytes": 4612,
+    "sha256": "7A6F2119A5C1295D1D5D1024CA77B7FBB9BDDF483FB476158536CCA847347350"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\imports.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\imports.html",
+    "bytes": 2528,
+    "sha256": "A31550938E052CD5A88C27C26E3B5913CAC367415E7256FA8F3319453CBA824A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\learning.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\learning.html",
+    "bytes": 2513,
+    "sha256": "7E43C0619092A950C9FB0F92B130DA1DE0F3956BDBC3A1F0F50DA7403EA17DBE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\ledger.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\ledger.html",
+    "bytes": 2326,
+    "sha256": "59DDAFB0F91D049364D8A7205EFDA8FD74A09532CCD3F1149208810ABA72C187"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\login.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\login.html",
+    "bytes": 659,
+    "sha256": "43D87302112AB044FF6AD1FAA00BDFEFF582717C7FDCEBF01F113EBDE4CFC9DE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\money_flow.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\money_flow.html",
+    "bytes": 4473,
+    "sha256": "F1AC757E04CE8FD750106A558F3C3CAF4613F353B7ED08946394AB05A73F6088"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\monthly_plan.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\monthly_plan.html",
+    "bytes": 6185,
+    "sha256": "8731CF3BC6CBAF304A5AB171A641B5B0E2412C75C2134FC6425C27052D647364"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\profile.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\profile.html",
+    "bytes": 641,
+    "sha256": "80F5B829DE64FEC793B39D5D494BE41827C43C0F2AD3E4B22D54DBEC9A1372AD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\recurring.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\recurring.html",
+    "bytes": 2294,
+    "sha256": "367A7505A29E41CD7F16A75C0EAE490E783522CA5144B52528EBA1162C76540C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\register.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\register.html",
+    "bytes": 874,
+    "sha256": "0F7E0574490FACD54969D3F95EB8F4E4DF15CBAE18C68358F165E05BAF950B0C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\rental_search.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\rental_search.html",
+    "bytes": 2171,
+    "sha256": "E55DB0CA90A8CF3C329696D0628B484D6F2593F5E4CA4DE463A34D3D671F9540"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\review_deadline.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\review_deadline.html",
+    "bytes": 760,
+    "sha256": "AF1FE2C8ABA3E06AC866FDA07A2ECB2B36107657FC97DEB50A5A0B7859D224CB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\review.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\review.html",
+    "bytes": 4242,
+    "sha256": "8E0447A02351542E1CAC045349D310BB4BE0810C7388611CE78B9BEB8F9554D6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\spend.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\spend.html",
+    "bytes": 1933,
+    "sha256": "B605992A1DF052049B530D98B44C6D540E77A639F67E25D3F706B80A79C51256"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\staged.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\staged.html",
+    "bytes": 4836,
+    "sha256": "5E716EDD358E3AD694E7A6FF1A9567428DE698B6E691C715A0117F8B4F3BA041"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\summary.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\summary.html",
+    "bytes": 1500,
+    "sha256": "52F6F94C1C7808727185524A26E6F54323D6A4EAB8884B736A87BE803714E7B4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\transaction.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\transaction.html",
+    "bytes": 2981,
+    "sha256": "8CF8ADDEF049CB66A7B3DC4A03B3038113E9F67E60F45C1BF638E09691683696"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\templates\\verify_needed.html",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\templates\\verify_needed.html",
+    "bytes": 435,
+    "sha256": "EC0B686C83ABB6C84007BD7FD8FEB0554AB7B944FE904B99057EBC50E8B8F763"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\web\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\web\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\web\\routes.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\web\\routes.py",
+    "bytes": 21426,
+    "sha256": "E321D34F7DEAD6C78FA81B2A7394304A12CC37FA4848126CCF07929C9E49B585"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\web\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\web\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 202,
+    "sha256": "6E037144DD8D79AE8E4A3C4DC6606E2540C030BB45CA70D415CF5910C858F16E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\web\\__pycache__\\routes.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\web\\__pycache__\\routes.cpython-314.pyc",
+    "bytes": 37462,
+    "sha256": "73BF03B2BAFC8CC308A041C62C13B5E88EDEECD5A5373143E3C2529F295F64D5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 13046,
+    "sha256": "9698CD46C40C8D27C6C4A5BA6DFCA76E204DE82C8E677F4350CD1FA32C5D8EC1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\config.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\config.cpython-314.pyc",
+    "bytes": 7875,
+    "sha256": "4BBB2BD5A4D6CEB7FF7E4F6D5EC999346A1CDEA7C3818C379531AA1C5C8CBBC2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\constants.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\constants.cpython-314.pyc",
+    "bytes": 1687,
+    "sha256": "8D95CA2F2B1D566999A464AE7924397948A1CEAA4DF1F96839554D9B7B7B370B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\errors.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\errors.cpython-314.pyc",
+    "bytes": 3733,
+    "sha256": "3A9F15D79884F50162A1BD0BFFA3CBF3B9ACBBAB09D464DC89C897EF8091D4F7"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\extensions.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\extensions.cpython-314.pyc",
+    "bytes": 913,
+    "sha256": "9ED2154393F92B72E28FDFBA00F303164ED239E612399C2C67F6634970834A5D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\models.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\models.cpython-314.pyc",
+    "bytes": 24181,
+    "sha256": "458D2484BEBA851045A514FDBA6E0259D44E93FC6C309B9CC81B9BD6FBED1D1B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\app\\__pycache__\\session.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\app\\__pycache__\\session.cpython-314.pyc",
+    "bytes": 3913,
+    "sha256": "0E89CD49B1AE3336A15111F4FF26653DBE168C43AAF56549B5466210D4FDD384"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\hidden\\hidden_qa_expected.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\hidden\\hidden_qa_expected.csv",
+    "bytes": 383,
+    "sha256": "40CAF186F14A9BCCE274078A0823D8D789878FC138C3D41D7B2046CEA257B238"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\hidden\\hidden_qa_input.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\hidden\\hidden_qa_input.csv",
+    "bytes": 627,
+    "sha256": "E7E546A36715163B5DF543DDE26F91011F7B5056E089113DDD7D77BD6866BD51"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\city_master.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\city_master.csv",
+    "bytes": 30582,
+    "sha256": "9EC30D0725193BD1F2F7473F19F629C954BC5B8E5C26E7AF047FFB278B936202"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\cpi_monthly_clean.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\cpi_monthly_clean.csv",
+    "bytes": 10546,
+    "sha256": "CC046E7A62F6D3D530A07A448762C1604577674A4A23E0B6AB0E84E507FDC54E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\final_user_dataset_integrated.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\final_user_dataset_integrated.csv",
+    "bytes": 4297936,
+    "sha256": "9B18DFB026D3411D4FB7DDE4267E783E08D7B976602FD141AFA0209157B1B6BC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\final_user_dataset.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\final_user_dataset.csv",
+    "bytes": 5372792,
+    "sha256": "D8ED51D82629B289E85E29693EA8E40CE80B457981C417E63AC0B99DEA6309E1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\hces_benchmarks.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\hces_benchmarks.csv",
+    "bytes": 12998,
+    "sha256": "6BFEDE650AEF59CF02C9D4992622F9F9610FD09623D32577FDB8F411A4328012"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\hces_household_level.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\hces_household_level.csv",
+    "bytes": 23438854,
+    "sha256": "96FECF3056AE40DF7840603BF31E00010FAD82F01865BA35A6C91FBD8BCA6105"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\rbi_monthly_clean.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\rbi_monthly_clean.csv",
+    "bytes": 7271,
+    "sha256": "7D481610DE83DF14B0C7C3ABB4C92844EA61FB892CFF8A6F08CDDEFF53548814"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\rbi_rates_clean.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\rbi_rates_clean.csv",
+    "bytes": 6384,
+    "sha256": "4ADC1CA31F7BE0504AD03B08CE462B7429A5FA7628669E834C4C753ED18D3A82"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\data\\processed\\user_financial_data.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\data\\processed\\user_financial_data.csv",
+    "bytes": 1958847,
+    "sha256": "FDA16CAD388893ED2DF5A895C9A84B3E8C2B421900D47B17E84747A21A426C20"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\architecture.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\architecture.md",
+    "bytes": 4260,
+    "sha256": "4717B4094E4988231695876E0641274B800D3C44ADF753BCBDD784D192020718"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\contracts.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\contracts.md",
+    "bytes": 8552,
+    "sha256": "FF7EE8C6D06387806A70B1C23072563E1F515D71AD77DB56DD2B31523437168A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\csv_import_specification.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\csv_import_specification.md",
+    "bytes": 3354,
+    "sha256": "5477FE5D437E37C2DFAFF5C5581EB98C732A4D88DD09FD443B0E2617438314AF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\database_schema.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\database_schema.md",
+    "bytes": 2003,
+    "sha256": "308335A590897976F713A16F8FAC859DF7A989E5B4CF7C3FCA9B9049A7F72163"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\deployment.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\deployment.md",
+    "bytes": 1661,
+    "sha256": "A8C4A6C43A5FF01AD060E07AE3B11A481BC4CDFEABD46A3AF626DC7124DB3075"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\testing.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\testing.md",
+    "bytes": 1535,
+    "sha256": "1E6AB021ECB4C7D721A01EB3A2E1B87970A9CE9377745145B15B608027B2C367"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\biswa.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\biswa.md",
+    "bytes": 5563,
+    "sha256": "4060F03FEEA1662793B5EA812A4D96CC254263C0F2273DD7BC749677A20F92FF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\README.md",
+    "bytes": 938,
+    "sha256": "95867EFA856AC112A5EE2382B233D2E1CB7523CE52A2F645582D69DD82EC5CBE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_01_2026-11-01\\monthly_summary_fixture.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_01_2026-11-01\\monthly_summary_fixture.json",
+    "bytes": 1956,
+    "sha256": "0B9E0D16918D93BE3550246F34C85416531F7CE3A3E36F0F0552AC3172061599"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_01_2026-11-01\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_01_2026-11-01\\README.md",
+    "bytes": 1096,
+    "sha256": "82B17535E0F6946D193386EB125E84445390104CE4BBEDC76E8D4D982A407FFD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_02_2026-11-02\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Biswa\\day_02_2026-11-02\\README.md",
+    "bytes": 762,
+    "sha256": "3E39C663B9889291CA07159A55F6A2FF569A1FFD8A9DC26FC5BEE488D7402AB1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Disha\\day_01_2026-11-01\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Disha\\day_01_2026-11-01\\README.md",
+    "bytes": 932,
+    "sha256": "3DA3BFFB4C58FC86CBABD4EAFBC5B6AF977555E6B7AAF0B93BA4BC4697C0EFEB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Disha\\day_02_2026-11-02\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Disha\\day_02_2026-11-02\\README.md",
+    "bytes": 1203,
+    "sha256": "F59FF37FE7D893CE965CF4A3326FAEB66DB416FBBA48FCC58AD8B914D4D86A57"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Saarthak\\day_01_2026-11-01\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Saarthak\\day_01_2026-11-01\\README.md",
+    "bytes": 1313,
+    "sha256": "BBE7FAA2CF02CCBCB12152E8806F4F9FAA589C47FE0D10317B7C1C6FF5735398"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Saarthak\\day_02_2026-11-02\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Saarthak\\day_02_2026-11-02\\README.md",
+    "bytes": 2365,
+    "sha256": "530F85296ECC4B7DD8918E94AF95292359D0A79FDC36ED0B156CC029EA2AF5B8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_01_2026-11-01\\monthly_summary_fixture.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_01_2026-11-01\\monthly_summary_fixture.json",
+    "bytes": 1956,
+    "sha256": "0B9E0D16918D93BE3550246F34C85416531F7CE3A3E36F0F0552AC3172061599"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_01_2026-11-01\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_01_2026-11-01\\README.md",
+    "bytes": 1083,
+    "sha256": "25D2F0028865D8EC77E9E4BC164EDF410244C561FAD1F09730044F12FC6A6F16"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_02_2026-11-02\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\docs\\handoffs\\Urnisa\\day_02_2026-11-02\\README.md",
+    "bytes": 826,
+    "sha256": "330B798DB984BC48C483307F9B9E1A16C2BD339642233BE9C4E0B1E2ECAFFEE7"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\01_profile_data.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\01_profile_data.py",
+    "bytes": 1772,
+    "sha256": "2E5ED91EEDC86C87A5E41CB68E079A018D8C05FAAA62ACDC1DCFBA1205A1E279"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\02_clean_data.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\02_clean_data.py",
+    "bytes": 5114,
+    "sha256": "44D1A13CCBDFCDE39B7FA0CD7C53095CA8B094E5E1DAB8363EBFFCE0E380DC27"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\03.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\03.py",
+    "bytes": 1407,
+    "sha256": "59530EAB30B1F5956B7CBD495ABC99369F4CF6D223E3127FD1323A069F04B441"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\merge_hces.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\merge_hces.py",
+    "bytes": 1646,
+    "sha256": "133C6E87477D5E14DC86B179C37A73C9C6C842954700181226B060EA2A7FA5E3"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\README_LEGACY.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\README_LEGACY.md",
+    "bytes": 1672,
+    "sha256": "3EC6383C8FAAF4C8532B128F9593212E6DACD2853DAF30CB5271787287355AA6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\legacy\\utils.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\legacy\\utils.py",
+    "bytes": 2524,
+    "sha256": "3184D0DD4662A8A6D3F35F721933EFA3D3325553A5FDE4EB2B32D75BCA91518C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\env.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\env.py",
+    "bytes": 1044,
+    "sha256": "5A01C9A005B59AA50FF0C57327DA9CC553080F7FA77CE2A4B4C7049FEC114939"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\script.py.mako",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\script.py.mako",
+    "bytes": 445,
+    "sha256": "29A33CA0495490F045B3846836347AE894DCBA95533D59A7AA100E9E5CBA6510"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0001_initial_schema.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0001_initial_schema.py",
+    "bytes": 12375,
+    "sha256": "550D0B986C766E4896A64BC7A9B7B0966072DF2E70C350AD4479DF6B534091A4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0002_account_household_consistency.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0002_account_household_consistency.py",
+    "bytes": 3506,
+    "sha256": "504D3735B1E12C3D35A656E40BF0D193A3295E0233E3FD4B33A70E41939017CB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0003_review_expiry.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0003_review_expiry.py",
+    "bytes": 997,
+    "sha256": "0A9458D5E807A43B3CF9A53B91812B004838DEB2BF4DEE31E5EFD6C9DCDECD9D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0004_deferred_classification.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0004_deferred_classification.py",
+    "bytes": 1425,
+    "sha256": "CF9284CBB5192A8E8EBB9EFBDD96AB33B7EDE97B7B48611B40B5B68041CEF5B0"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0005_transfer_decisions.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0005_transfer_decisions.py",
+    "bytes": 973,
+    "sha256": "68A75A8E98BEC31E7AE2B8773AE6C613B68A172988128D7D9ECCA161001B0BE8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0006_monthly_plans.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0006_monthly_plans.py",
+    "bytes": 833,
+    "sha256": "A24F2A12E7AF1DB89B59C81A3E67F97E555C1D7C37C34798C620FB7692A7936B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0007_housing.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0007_housing.py",
+    "bytes": 504,
+    "sha256": "BBCAC51DDEA8C1E42526B8C78065896B5B83697B29CB1D5E7B656042EFDFC2D8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0008_planning_tools.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0008_planning_tools.py",
+    "bytes": 1321,
+    "sha256": "4C49CEB9C6B9000577E766B6597655D35B20BC54B8FAD49F99412FBC564C2406"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\0009_planning_intelligence.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\0009_planning_intelligence.py",
+    "bytes": 1800,
+    "sha256": "08C9B2D02AA4CE8663EA104580329A52D769AC50E1EE3D795EABBCFE3DDCEF07"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0001_initial_schema.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0001_initial_schema.cpython-314.pyc",
+    "bytes": 19688,
+    "sha256": "8A698423F9309817A202063BD1CEB0348FD9E7D66013BFBC0AE8ED4F22039B48"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0002_account_household_consistency.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0002_account_household_consistency.cpython-314.pyc",
+    "bytes": 4130,
+    "sha256": "470693DD88CDB8EE8BD12BC8DD171B0EB89CF7879105979CBAACE96C035CB258"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0003_review_expiry.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0003_review_expiry.cpython-314.pyc",
+    "bytes": 1838,
+    "sha256": "1BE3CB90FA13FAA57F9252D75B65D2E94D65470E4A5EDD96E18BA73FF3A47E29"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0004_deferred_classification.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0004_deferred_classification.cpython-314.pyc",
+    "bytes": 2536,
+    "sha256": "D033B04294130BCAC228311230BDB02CA8B83C1DA4F8CC87592E138656DA368B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0005_transfer_decisions.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0005_transfer_decisions.cpython-314.pyc",
+    "bytes": 1953,
+    "sha256": "8C851792652A596D9AC1E37E6C0921E7D42E825B56A7CDC6549CA1833631245C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0006_monthly_plans.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0006_monthly_plans.cpython-314.pyc",
+    "bytes": 1954,
+    "sha256": "0F23EA76C59B6C27D3D5BF812BF7EDC9FD6C5F86845B4E78075B4FC4DCC2219A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0007_housing.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0007_housing.cpython-314.pyc",
+    "bytes": 1235,
+    "sha256": "A9572E7500273E24E1D72D0447E83E8D2A9ECCD4184495B09B5A95CDFD7CFBE0"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0008_planning_tools.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0008_planning_tools.cpython-314.pyc",
+    "bytes": 2700,
+    "sha256": "3E4200AFAF68904686036E7B252A3E59F8ED27255D84A47CD5EA45545630C008"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0009_planning_intelligence.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\versions\\__pycache__\\0009_planning_intelligence.cpython-314.pyc",
+    "bytes": 3388,
+    "sha256": "624E53691F09939E230E2F49FAA1AF77CCADA323EA0DD35ABC6A51594CB15DC6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\migrations\\__pycache__\\env.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\migrations\\__pycache__\\env.cpython-314.pyc",
+    "bytes": 2056,
+    "sha256": "5BE7672D4B61A3B0A10AFF101233A4F6E50316076450B797A8DA1D9C3B9A72F6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\.gitattributes",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\.gitattributes",
+    "bytes": 177,
+    "sha256": "C31501B2CDF0D74A4907F51BC831A892E68D1F67421C19539642B818DECC25AB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\.gitignore",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\.gitignore",
+    "bytes": 26,
+    "sha256": "6C8E962EED17306864BE044DBF8E11C6CD1FF4C8E4E84236C9BCEA1A8AABEC9C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\compare_validation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\compare_validation.py",
+    "bytes": 2787,
+    "sha256": "14160490F3F1D2C7BA323D02EEAA3BC7A8B3D25C8C7371506FDC2760DDE2CCE4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\README.md",
+    "bytes": 5004,
+    "sha256": "3D0EFB6BCACD2DA0FFCB12AAED07E1814BDF31768F227868207106864B1BF6F2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\requirements.txt",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\requirements.txt",
+    "bytes": 65,
+    "sha256": "935A4845137E97560F7F76D33F7E222B552A86B5A9CC293DD5EA2DC8BBD20063"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\final_test_v2\\freeze.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\final_test_v2\\freeze.json",
+    "bytes": 2699,
+    "sha256": "C83CFB5959D20E216CE59014FD63DDF58A955ADDA5D72CAE3D88237C954F0078"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\final_test_v2\\results.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\final_test_v2\\results.json",
+    "bytes": 106254,
+    "sha256": "C552302C6D7BAB9AF2257CA2430AA03252BDE543B4CA48783CCC7AAD62E10D15"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Complement_Naive_Bayes.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Complement_Naive_Bayes.joblib",
+    "bytes": 246649,
+    "sha256": "1AD1716FFFD0B76E9C2A3ECB384DEE1ECE32F34D70275B4284C5944AC9035B7C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Linear_SVM.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Linear_SVM.joblib",
+    "bytes": 140048,
+    "sha256": "9820D9A24A5E3B6A969A8BA17EF0F205256BB00D81301AF9290E55BE73F73176"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Logistic_Regression.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Logistic_Regression.joblib",
+    "bytes": 140164,
+    "sha256": "5494D601B0AB61CC4ABE3EA72B17A6697E9E51A7583C4716BCCD1A63582EA00D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Random_Forest.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\Random_Forest.joblib",
+    "bytes": 4025757,
+    "sha256": "70E155F5BE613CA418AECD23FB4951DB9F035A1921095E6A2888CC83B5FCCF81"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\validation.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\validation.json",
+    "bytes": 108660,
+    "sha256": "0103FD0A42754090F2DA04AB346ADF58F07868367BF4A3A27D4FB4A14957ED94"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\preparation.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\preparation.json",
+    "bytes": 1400,
+    "sha256": "DD81194AB691483FE88E1AD0B8821DA075DED07EFE5ACC5C97182E9C15EC1E3D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\tfidf.joblib",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\tfidf.joblib",
+    "bytes": 38994,
+    "sha256": "3FBEE91160FEA7AA94227D838081005E16149F8B428CC9AF246AFDCAA05A3D79"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\train_rows.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\train_rows.csv",
+    "bytes": 13201,
+    "sha256": "62C2FB1EC4ECE384054ACA3320D6FD4A9CBEA9DCA9B745FADBB948FC71BB11CF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\train.npz",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\train.npz",
+    "bytes": 25690,
+    "sha256": "EA0A7768B12CDEFFBB1575EB6BFFA376F9EA6F5099D3A5113190AAC5E79E410A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\validation_rows.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\validation_rows.csv",
+    "bytes": 2820,
+    "sha256": "602AA63A631D5803C1B00C5497B2794EA111B3E0E27D45096F9AE8BF3BFEF43A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\validation.npz",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\artifacts\\validation_v2\\shared\\validation.npz",
+    "bytes": 3909,
+    "sha256": "D7769ECD68ED28B96022B870950D73693A7BEB4CF64DBCF9012C233EF9C8EC19"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\contracts\\v2\\dataset.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\contracts\\v2\\dataset.csv",
+    "bytes": 44935,
+    "sha256": "6DED5297A5EE93C6222F0A5F5DC42695E00344FD92AB5AE6478DB54E766359CE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\contracts\\v2\\label_map.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\contracts\\v2\\label_map.json",
+    "bytes": 321,
+    "sha256": "66CE2B82F34CB350A606A45E20D89D8845D28DB53D73704D9E4B481972414483"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\contracts\\v2\\README.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\contracts\\v2\\README.md",
+    "bytes": 3233,
+    "sha256": "D4E7C5104A4F63263FCB753C7D6242BB2DF840EB7B78B397891C124134D3603E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\contracts\\v2\\split_audit.json",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\contracts\\v2\\split_audit.json",
+    "bytes": 2271,
+    "sha256": "4F4F67286677B71E036F4927BEC22CA350D51BBE9B889FDEF3A81A30EA876AF2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\contracts\\v2\\split_manifest.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\contracts\\v2\\split_manifest.csv",
+    "bytes": 20468,
+    "sha256": "6357F23CDF8EC343862B3DBC2510E628313B195CF7CFD1AE9E6CA91EF46F92CA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\shared\\evaluate.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\shared\\evaluate.py",
+    "bytes": 3206,
+    "sha256": "55DEA11915F0320EB8817A17E5A745689748FBEF812A70A1849DDB96E6ADA586"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\shared\\prepare.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\shared\\prepare.py",
+    "bytes": 2184,
+    "sha256": "A1A3C96DAE65BE9C3CC7E197B660B2D12D80B45949D797871BD44A7FDDC0C300"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\shared\\protocol.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\shared\\protocol.py",
+    "bytes": 3353,
+    "sha256": "46FA728CA2123CFC46C2458A1003C6B2714925D0573E835F29C9E9E57E02C244"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\ml\\tests\\test_shared.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\ml\\tests\\test_shared.py",
+    "bytes": 4431,
+    "sha256": "D1E2ABE71D24D2A653EDB059A097F799F27C7DD293254BAC99B0767F7083DD19"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\presentation\\presentation_content.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\presentation\\presentation_content.md",
+    "bytes": 5260,
+    "sha256": "B4627FE6EB6C7C99F55619E4CC251054E6389C76EE7F96ADA9CD628A135F64F6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\autopsy_fixes.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\autopsy_fixes.md",
+    "bytes": 2673,
+    "sha256": "BFAB1738AC209EA30B415A0474CD8DEE8C974A36B0BD27209A7B6013630B244A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\city_affordability_engine_2026-11-08.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\city_affordability_engine_2026-11-08.md",
+    "bytes": 2444,
+    "sha256": "030AC673C20B41A5AAD2640EF0716461AF17B44EE3E165BAC7C965D03A275E10"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\city_dataset_audit_2026-11-08.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\city_dataset_audit_2026-11-08.md",
+    "bytes": 3608,
+    "sha256": "9D8B426C15ECB68FB6FF602C8FD8E362065A9C26953C98585E993183F5BEB28D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\city_processing_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\city_processing_log.md",
+    "bytes": 1339,
+    "sha256": "A01A453A317D5D5CF04EA0716409B95A9A37BEA8BF7D39B1A790A0C44566684E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\cpi_processing_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\cpi_processing_log.md",
+    "bytes": 1107,
+    "sha256": "ACC44087157C3FAE689847C915555A0EFFE7904F7AAFA67D55686B2E49D7B571"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\data_inventory.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\data_inventory.md",
+    "bytes": 3702,
+    "sha256": "F7A9A99A6A0691802281444EFF59BACB9C2DE445D321B011F072E981194E5F5C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\data_preprocessing_report.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\data_preprocessing_report.md",
+    "bytes": 10398,
+    "sha256": "69E98B5610660A1A9DC7E7C50267511AA8949AFF68ABB61DFE546DB166120783"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\data_quality_report.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\data_quality_report.md",
+    "bytes": 2529,
+    "sha256": "A08FBF344DF20353C79510E3433F00F6E43F7F3A43F34D3F240033D4F12587AE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\eda_report.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\eda_report.md",
+    "bytes": 5296,
+    "sha256": "5F4307F20117FC0CF80BC2FFFE777CF70E305D72C7F90B28C1BF33055CF28A9B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\feature_engineering_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\feature_engineering_log.md",
+    "bytes": 2079,
+    "sha256": "361C8E1C5A9016B72C671A69AC1593F53A7BD7F37F7C2C8F4E59A0FC0F39A70C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\hces_processing_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\hces_processing_log.md",
+    "bytes": 1340,
+    "sha256": "B97BE51CC9BCA75E4F984C687D71A8BD5E78922935A64CA9F0374D880C5B3D9C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\hces_processing.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\hces_processing.md",
+    "bytes": 3315,
+    "sha256": "02437F94FD94FAB8D03B05D7CEF81BBE348830D03D8C51C1F5526C679D18C425"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\hidden_qa_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\hidden_qa_log.md",
+    "bytes": 576,
+    "sha256": "34B4D82AFFC784D5C024664448404EB4EE1FFD319BFED404886A2EEF93C803DC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\integration_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\integration_log.md",
+    "bytes": 1035,
+    "sha256": "D3846F0CF403BD66AC29B6AFB585F7D34010DC534156489F9B562DF3F2DAD3F8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\ml_methodology_plan.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\ml_methodology_plan.md",
+    "bytes": 6901,
+    "sha256": "16A2D5ABC8C0B81B6DE49010ED0A80CB08E4C0E62436ABDBC901C29A4FC797D5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\next_planning_batch_2026-11-09.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\next_planning_batch_2026-11-09.md",
+    "bytes": 3109,
+    "sha256": "2DFF433EA18EC38A3E29F8E07AB07786CC8E186EA9F238A1691169EB953EBF50"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\qa_report.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\qa_report.md",
+    "bytes": 733,
+    "sha256": "E910FC2BC8067E3D69A3910E8C0A413C7B37CB2BA62C887D65E3677325F4EB10"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\rbi_processing_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\rbi_processing_log.md",
+    "bytes": 1002,
+    "sha256": "B85303FE786F1DB29705C6A4E2963DE323492BD32D5169ABE5DB078FF61C9A0B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\rubric_mapping.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\rubric_mapping.md",
+    "bytes": 3755,
+    "sha256": "49EECB6B381A85382437518225F4F9D9D2742973B594449ED85C5A43D71EE26D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\team_contributions.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\team_contributions.md",
+    "bytes": 1612,
+    "sha256": "A39972A06B9A598D737F6F27F3442F2F4802542730EA92603D67F8F5F5F3F00B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\test_cases.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\test_cases.md",
+    "bytes": 3277,
+    "sha256": "18359718998AFB67F6AED8BE22ACFF9A9ADAC6BCB5520A340B98CFFAEB674616"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\reports\\user_generation_log.md",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\reports\\user_generation_log.md",
+    "bytes": 877,
+    "sha256": "4F42719A9E823F1042E16ECB4A4416CCF53072AF915AB0A7062BFAF35433E73A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\data_pipeline_qa.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\data_pipeline_qa.csv",
+    "bytes": 3017,
+    "sha256": "9B2FF9A6923A39C7B6E02458548FEF452760D88F8158FFF1BE370BB3304A6E0D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\01_income_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\01_income_distribution.png",
+    "bytes": 22001,
+    "sha256": "3DA27F4D66B7915EF9E7E4F534980F7DFF2C99A1DB43D22B69A54443574DC9DA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\02_expense_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\02_expense_distribution.png",
+    "bytes": 21856,
+    "sha256": "2E1085543FA07F4082C492F50E00497BAFB22F8059749A8CD42240A158571146"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\03_savings_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\03_savings_distribution.png",
+    "bytes": 23181,
+    "sha256": "24F73BDF9BFAA19AE1E6A1EA691EAF4C90FAA28746B4D9858562D50046406771"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\04_savings_rate_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\04_savings_rate_distribution.png",
+    "bytes": 19853,
+    "sha256": "B005F46E029BC3B058019C1C13ADE41252A1250A9141B6F5C0BFCB406F04564A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\05_emi_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\05_emi_distribution.png",
+    "bytes": 18853,
+    "sha256": "2E52B0F9E1CAE83BE89C7CA51582D087A6F27FB8093E2C884FC8C18677D57205"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\06_networth_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\06_networth_distribution.png",
+    "bytes": 23671,
+    "sha256": "46B80811D3283A0CE61319F229BCB25E49FE04D3447A4431737E8CDF7F071684"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\07_income_vs_expenses.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\07_income_vs_expenses.png",
+    "bytes": 75344,
+    "sha256": "041BB875B03C8226608599A19C9B8F8F2B48B65741E9E291ECFB99AE63CCEFFD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\08_income_vs_savings.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\08_income_vs_savings.png",
+    "bytes": 75490,
+    "sha256": "9F0210842A62B3805CA6512B257A91024FD67540B665C4C73AEDA93FFE0B38A1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\09_emiratio_vs_savingsrate.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\09_emiratio_vs_savingsrate.png",
+    "bytes": 118915,
+    "sha256": "91A5F42C68518CA08BA44E3211936CCC16D9BCAA749B39262CDCD45949114405"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\10_dependents_vs_expenses.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\10_dependents_vs_expenses.png",
+    "bytes": 41480,
+    "sha256": "0254496C8756B6EA750F88D45726DF8922368E5472D58B39F114D412214A000C"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\11_cpi_inflation_over_time.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\11_cpi_inflation_over_time.png",
+    "bytes": 47624,
+    "sha256": "A64AADC1588B7D2039DBB72FB4AFE041106C71C1FAF32CD88C32024BD4B2C0A4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\12_rbi_repo_rate_over_time.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\12_rbi_repo_rate_over_time.png",
+    "bytes": 31827,
+    "sha256": "850A897D3F21B1A9D9190233E95B7DFF0BA74A388C2CA441F10BB3A44BCEBD5E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\13_goal_feasibility_distribution.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\13_goal_feasibility_distribution.png",
+    "bytes": 20723,
+    "sha256": "3678059E8A7D481072A98298F49999618AA0071489FFE04E90A57C524F874132"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\14_city_cost_comparison.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\14_city_cost_comparison.png",
+    "bytes": 41776,
+    "sha256": "123D01FA29CD18B3FF07E4E6BE4E765942A63EB2644CE77264B3BA27054A7DA9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\eda\\15_hces_sector_comparison.png",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\eda\\15_hces_sector_comparison.png",
+    "bytes": 24731,
+    "sha256": "5C5D2DFDD869D5E334733BACC4BCE4A19A26CDA05E2AF4FD09F37699C2A7D141"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\tables\\data_quality_summary.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\tables\\data_quality_summary.csv",
+    "bytes": 504,
+    "sha256": "7853538BA25864D57121A81C940A0FECBFAD0D50C866B3186F6F20066979CB5A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\tables\\eda_descriptive_stats.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\tables\\eda_descriptive_stats.csv",
+    "bytes": 1443,
+    "sha256": "37DBC42A22A7D52B3DF448735142EB3143A7B83682817C2D879346B6A24A98E0"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\results\\tables\\outlier_summary.csv",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\results\\tables\\outlier_summary.csv",
+    "bytes": 575,
+    "sha256": "1797382EE5433B8B41F019EB4C236DBDEA2A7778625AAC4DDA7229DAEB18E554"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\city_processing.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\city_processing.py",
+    "bytes": 4868,
+    "sha256": "F6AD75F87E0905D364F63BEDF6E68B4F1FC9626347FDF4801D08EAE1C8F3E37B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\cpi_processing.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\cpi_processing.py",
+    "bytes": 6581,
+    "sha256": "BCB2324E2DABBF794FDD829D28B389D73C0EBB8B2E2DF22FC4CC2A5240B1CC46"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\data_inspection.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\data_inspection.py",
+    "bytes": 3955,
+    "sha256": "A2ABF6FC4923368C9668253F5D73ABE48EA8072374E35851D2E6A4A700318AE6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\eda.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\eda.py",
+    "bytes": 11740,
+    "sha256": "157980754990F6D82DAA97CD11210313DD1F7EBFE47D8BEE76E412634A32C966"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\feature_engineering.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\feature_engineering.py",
+    "bytes": 4272,
+    "sha256": "6B0439660A3C86B7351D22D4070B3D3178CEAE75EF0E96862EFAED3E7F692AB3"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\generate_hidden_qa.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\generate_hidden_qa.py",
+    "bytes": 5609,
+    "sha256": "531EA79089F4B6A124237328CF51A42015ABC478F3573BED7F390E7FDD4A1AD7"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\hces_processing.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\hces_processing.py",
+    "bytes": 13562,
+    "sha256": "7464618DEE0D85C0C2AB1A60C6D7425AF5CEE2F00390F7B165FE57035BFA480A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\integration.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\integration.py",
+    "bytes": 4840,
+    "sha256": "C0C0E360754E8DD5449CF2B2F19957796C4BBCB5AF2CD97D5ADF83599CA3CD06"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\qa_tests.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\qa_tests.py",
+    "bytes": 8534,
+    "sha256": "2DBA89A506DC0AAC1E151CCF0F3059F1D7AD46A23CC1B080E92C547BCF083403"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\rbi_processing.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\rbi_processing.py",
+    "bytes": 6516,
+    "sha256": "C982B8C5814D3208E825826F2C263F10713B7B64A0E1EC729F95977E97F260A4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\run_pipeline.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\run_pipeline.py",
+    "bytes": 1580,
+    "sha256": "2FEE104B4A5F4EC06840FA53F1FDB173D19871AF217B41C0FB515D44C67AA914"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\user_generation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\user_generation.py",
+    "bytes": 8752,
+    "sha256": "1C46690166A3038C40C61777B7C7D137CBAA5925655F561A82EB4B05E75C70E8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\utils.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\utils.py",
+    "bytes": 2878,
+    "sha256": "F67868EE879EB21E9E6705EBB67EA899EC63551538960D30E3BD035BCB9ECF33"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\src\\validation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\src\\validation.py",
+    "bytes": 7712,
+    "sha256": "5C569E6DE4F4945B9D43CF8D08D296B791E7DAC6BB483C70E56323B50FA7DE49"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\conftest.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\conftest.py",
+    "bytes": 3310,
+    "sha256": "73CC5DE3E69F64B5CC3C5505979032D388302958D9ADCB274C6A01C83153C7D5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_auth.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_auth.py",
+    "bytes": 6010,
+    "sha256": "2E35312A024907D30B301039EF50DAD3E02A9547F1014221D3D6F7F860C62CC6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_authorization.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_authorization.py",
+    "bytes": 6871,
+    "sha256": "F973B869207C2A19BB097DAAFC8ECAAD5572E54944BA76BFF61351CDEC93BFEB"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_browser_e2e.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_browser_e2e.py",
+    "bytes": 8223,
+    "sha256": "C6397D1916835FFC4E2418A0E3E20AD15D2BC563B3F59C4659856A9608266395"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_category_suggestions.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_category_suggestions.py",
+    "bytes": 2371,
+    "sha256": "8FCF6F5297187C0772EA426B62B92EDEB336FC515945642B31C5AE543E50043E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_city_affordability.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_city_affordability.py",
+    "bytes": 1207,
+    "sha256": "DEF239AAA52360C3DDF23148E7427AAFD8FF1907C7163EAF91CC90750D88EAA1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_concurrency_pg.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_concurrency_pg.py",
+    "bytes": 1074,
+    "sha256": "667D30B7985C1F7849440762EFA3216D5F8BBC6C1F24D9496FC59DD04E545699"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_config_validation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_config_validation.py",
+    "bytes": 5844,
+    "sha256": "56E09DCE4FF3E1C39F0418C7C9795A8CDC47C5468A4BA9F584E651845A2EE80E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_csv_parser.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_csv_parser.py",
+    "bytes": 4372,
+    "sha256": "C2DA965E5621F0B6DE810A9A46CAA112F245441938EEE336671D725BA0274228"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_excel_import.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_excel_import.py",
+    "bytes": 3794,
+    "sha256": "8DD8E2DFA7BB4334273276C537FFFD80BF88331DAA5706081381E170E8B3B209"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_finance_semantics.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_finance_semantics.py",
+    "bytes": 9890,
+    "sha256": "D60095B0BFC4A7FBE7F28EA739A1D299F2CC5DEE017C8DB1EAB2691C91AC509D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_handoff_integration.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_handoff_integration.py",
+    "bytes": 5776,
+    "sha256": "E57094D6B31684DA2BD794E407711412EA731EEEB177EA2A9163834ACA6D936B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_household_calculations.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_household_calculations.py",
+    "bytes": 4542,
+    "sha256": "BA109F6BC636976557BA4A628C7AA04EBC73F4F219BD8B0658711734DB76D6BC"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_import_flow.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_import_flow.py",
+    "bytes": 14088,
+    "sha256": "5C618D3BAC630AB520893AD66C6680C498E429EE65CBABEE3DA7DA1DD0790B11"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_ledger_aggregation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_ledger_aggregation.py",
+    "bytes": 3123,
+    "sha256": "F27045A3C6F60C7F3E9C253A213EA66F3E512E4784C02797295987F4746BF2FA"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_money_flow.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_money_flow.py",
+    "bytes": 3477,
+    "sha256": "4AF35A578EC742F7FDCAF0DF95D6D1AB33C204525D8855D992048678EA9F8C3F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_monthly_plan.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_monthly_plan.py",
+    "bytes": 4600,
+    "sha256": "048CC3B43594DBA0101D68BE878E4047AD9D67DF8E1646818B3FF178C564FDA6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_next_planning_services.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_next_planning_services.py",
+    "bytes": 1052,
+    "sha256": "F52F4E3A6957F44CF642DEC3EA9BD7704A3FD1C0DFD172E268E726659AD0D3A1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_persistence_and_schema.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_persistence_and_schema.py",
+    "bytes": 3294,
+    "sha256": "10B150C25905E3FAD3D745A1B4338E6B8A38427B2090A9774F091B2C85ADB203"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_planning_tools.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_planning_tools.py",
+    "bytes": 3144,
+    "sha256": "75088834669E3E6F080EF9B260602981FF33747D476A2FD44B75615974175658"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_privacy_boundaries.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_privacy_boundaries.py",
+    "bytes": 2247,
+    "sha256": "FE5DC6626917EB968D2D03D6EEE805E462DF7A9C42AD3E357A8B6FDBF7B4C1A6"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_remediation.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_remediation.py",
+    "bytes": 5484,
+    "sha256": "5C9EE30553B86CA3985FCEF60755AE325CB2DE37AB5EDDF92368A6E24EE712C2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_review_expiry.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_review_expiry.py",
+    "bytes": 2916,
+    "sha256": "C882237EAFC389623F5413410432E27876904E13C39513B27AF542317B14F62D"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_review_later.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_review_later.py",
+    "bytes": 4457,
+    "sha256": "FAFA99A22068DC5C2A501F876A92A282636E9733C2556FF9EA3B6DBCD92DBB16"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_test_database_safety.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_test_database_safety.py",
+    "bytes": 451,
+    "sha256": "668565A8ABB6CF869610616408F63EE0921BC5B7792C76186A22F4B0D3EC8D42"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\test_transfer_matches.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\test_transfer_matches.py",
+    "bytes": 4107,
+    "sha256": "72B7DB482C5BE7C878C4C660F145C2006A02557A9FF8255B50933E456BFD4D5E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\doubles\\__init__.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\doubles\\__init__.py",
+    "bytes": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\doubles\\reference_summary.py",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\doubles\\reference_summary.py",
+    "bytes": 2521,
+    "sha256": "8414AF3C0C27AF2B7EEE54CF45B13D53EB2A418DBC062FD0CAE3C76EA56256F9"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\doubles\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\doubles\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 208,
+    "sha256": "2DA42D7FEEFC66D470C713730CD1060DFB3C432BBA17ACDB38B6E6B336D198D5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\doubles\\__pycache__\\reference_summary.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\doubles\\__pycache__\\reference_summary.cpython-314.pyc",
+    "bytes": 2606,
+    "sha256": "CDE99F3FD2886F1B11EBEC003CECC6728D8D176A28BD067EC7D1EDC97ADC755B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\__init__.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\__init__.cpython-314.pyc",
+    "bytes": 200,
+    "sha256": "AB921202900BA9460C39C461EFFCA32C69E9A4552F9B92DE1DC257CB7DC4771A"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\conftest.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\conftest.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 9153,
+    "sha256": "A38199C6178D16F427570766977DF6D5F62315568107F69F815BBF6352A1E754"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\conftest.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\conftest.cpython-314.pyc",
+    "bytes": 6848,
+    "sha256": "1ABAF9209735D7648F5FF0BCD7F9470B0E602B88232546B325081EAE4ED32B26"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_auth.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_auth.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 43313,
+    "sha256": "18D1C984A77B49FEC3DE052C529FAD0A2B991448C7A5C824C3CFC1DB2901A844"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_authorization.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_authorization.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 47093,
+    "sha256": "8E8F5219E6A2999605F5E18F7FD8DB34123E5623848FBDA72F26920382719494"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_browser_e2e.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_browser_e2e.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 32150,
+    "sha256": "FB0989E826381002CCCE132B869E798F06D7375A8425EA21EB86E3E20450DD99"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_category_suggestions.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_category_suggestions.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 11651,
+    "sha256": "90297E0D59F017A5423A4C500472CB7920313F99855AB0B5467270C8D07196B2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_city_affordability.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_city_affordability.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 11287,
+    "sha256": "F98A3A1FD1DB0749DBB49CDB121E43293D5CDE0364C42DBD49824076C8B5C968"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_concurrency_pg.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_concurrency_pg.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 4759,
+    "sha256": "C1412B143B86425A78E71F04AF6CF9B137331FFFB060211FFBD3ED2E5EE23AE2"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_config_validation.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_config_validation.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 8911,
+    "sha256": "4B4C182A51F22583235B167579E2FEE730C3A1B0E3424FD87F66951F61419BB5"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_csv_parser.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_csv_parser.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 23607,
+    "sha256": "DEADBA84647C22179F07707BC6D1DA04C6DD5D73DE4CB580DAFFACFFC7C6A43B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_excel_import.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_excel_import.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 25594,
+    "sha256": "08180B97424E8D759B1F20818F0423B73C6EA126DC81DDDEFF04EE10F8C6D7EE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_finance_semantics.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_finance_semantics.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 35372,
+    "sha256": "144637C5708D861F426A05B2E4346C9C30B117604DFAEDE1D6F5F2AE30457F90"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_handoff_integration.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_handoff_integration.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 44967,
+    "sha256": "860471F4630D063AA536E06A981CD53ABB74336FE9F15F89956103B4491C01CD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_household_calculations.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_household_calculations.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 26660,
+    "sha256": "DD73CD8841E447B1E71018536D4A9DEB65DBEC289E9904F49BCCD2521E61AE3E"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_import_flow.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_import_flow.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 86130,
+    "sha256": "9FD1E0B7B0D81F08D18C511BACF3219B4DFCD6604AE8707601F299D2556CEA86"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_ledger_aggregation.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_ledger_aggregation.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 9927,
+    "sha256": "2D0DAFF6D674F08F0F5FE9729CE2962E2A68E2C8158D55BFD79441C1795C8903"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_money_flow.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_money_flow.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 25283,
+    "sha256": "F08A8EC644D0AF3AA860AB48400C9576DAC63CCB03AF23212420E7FDBCA3133F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_monthly_plan.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_monthly_plan.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 33308,
+    "sha256": "D8BBB13F32005990DEC89A6DAB3B601C4399E93A6229355E8C8AEBF7BC60ACEE"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_next_planning_services.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_next_planning_services.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 4328,
+    "sha256": "EBF53FE5E8DF1D31792BF318B8885767A598D7993AD9005932933633C828C5B1"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_persistence_and_schema.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_persistence_and_schema.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 18796,
+    "sha256": "00E610AAE91CB89D57A45B18743E13D63BA2F1D2685BADF0A4E509B0AACDF5BD"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_planning_tools.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_planning_tools.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 21369,
+    "sha256": "11EFB74BEED9A8342270530AC2BDCF5AEDAED65872E7E5B855DFC423A8B5EAD4"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_planning_tools.cpython-314.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_planning_tools.cpython-314.pyc",
+    "bytes": 5693,
+    "sha256": "F6DEE8A034E0E4B6356E28AE1FD83FA125FC1E3A498E3CCBE3113C60B82DEF1B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_privacy_boundaries.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_privacy_boundaries.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 14804,
+    "sha256": "F4E8E315ACF7CE852297E40FF012799A30900EF1AC302C5D5426E8A8C49241E8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_remediation.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_remediation.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 25367,
+    "sha256": "F6784C7D7C98B842F89C0F991827D918255A26E3B28729D985B58726BA8BEB7F"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_review_expiry.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_review_expiry.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 22767,
+    "sha256": "E1059B9E8031AF5CCFDCCAF3978A59B4832BA58F1B5157D42B6AEFA31CC7738B"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_review_later.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_review_later.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 25830,
+    "sha256": "5E4BA1A3E5B7F072F16FB833100FF068EE6BA4453160786000DD4EA7B53429FF"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_test_database_safety.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_test_database_safety.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 3305,
+    "sha256": "8EE6385F2A6C8B9CB6659CDE5B9128DC24C5BA158B6BFD8A23E80B81865C47D8"
+  },
+  {
+    "original": "outputs\\biswa_handoff_2026-11-09\\candidate\\Artha_AI_privacy\\tests\\__pycache__\\test_transfer_matches.cpython-314-pytest-9.2.0.pyc",
+    "current": "outputs\\Archive\\biswa_candidate_20261109\\Artha_AI_privacy\\tests\\__pycache__\\test_transfer_matches.cpython-314-pytest-9.2.0.pyc",
+    "bytes": 28838,
+    "sha256": "1C69127B1755E540D334AB4804B02FA189383E80E72783908F9BF6789B56BFAC"
+  }
+]

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Plan a move · {{ household.name }}{% endblock %}
+{% macro amount(key, label) %}
+<label for="{{ key }}">{{ label }} (₹)</label>
+<input id="{{ key }}" name="{{ key }}" type="number" min="0" max="9999999999.99" step="0.01" required value="{{ values.get(key, '') }}">
+{% endmacro %}
+{% block content %}
+<p><a href="{{ url_for('web.household', household_id=household.id) }}">{{ household.name }}</a></p>
+<h1>Plan a move</h1>
+<p>Compare your expected monthly income and costs, then see the cash needed upfront. Each scenario is separate from your current budget and recorded transactions.</p>
+{% if error %}<div class="flash error" role="alert">{{ error }}</div>{% endif %}
+<section class="card">
+<h2>Saved scenarios</h2>
+{% if saved %}<ul>{% for item in saved %}<li><a href="{{ url_for('relocation.index', household_id=household.id, scenario_id=item.id) }}">{{ item.name }}</a></li>{% endfor %}</ul>
+{% else %}<p>No saved scenarios yet. Choose a destination to start.</p>{% endif %}
+{% if scenario %}<p><a class="btn secondary" href="{{ url_for('relocation.index', household_id=household.id) }}">New scenario</a></p>{% endif %}
+</section>
+<form method="get" class="card" action="{{ url_for('relocation.index', household_id=household.id, scenario_id=scenario.id if scenario else none) }}">
+<h2>1. Choose your destination</h2>
+<label for="city">Destination city</label>
+<select id="city" name="city" required><option value="">Choose a city</option>
+{% for item in cities %}<option value="{{ item.city_key }}" {% if city and city.city_key==item.city_key %}selected{% endif %}>{{ item.city }}</option>{% endfor %}</select>
+<input type="hidden" name="reset" value="1">
+<p><button type="submit">Use city and reset inputs</button></p>
+<p class="muted">This loads the city's rent benchmark and clears other calculation inputs. A saved scenario changes only when you choose Save scenario.</p>
+</form>
+{% if city or scenario %}
+{% if city %}<section class="card">
+<h2>{{ city.city }} rent reference</h2>
+<p>Dataset benchmark for one person: <strong>{{ money(city.rent_paise) }} per month</strong>. You can replace this with your own rent estimate below.</p>
+<p class="muted">The snapshot and currency-conversion dates are unknown. This is not a current quote or a family-sized home estimate. Other costs are not available as verified city defaults.</p>
+<a href="{{ city.source_url }}" target="_blank" rel="noopener noreferrer">View dataset source</a>
+</section>{% endif %}
+<form method="post" class="card" id="relocation-form" action="{{ url_for('relocation.index', household_id=household.id, scenario_id=scenario.id if scenario else none) }}">
+<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+<input type="hidden" name="city" value="{{ city.city_key if city else scenario.city_key }}">
+<input type="hidden" name="revision" value="{{ values.get('revision', '0') }}">
+<h2>2. Enter your scenario</h2>
+<label for="name">Scenario name (needed to save)</label><input id="name" name="name" type="text" maxlength="100" value="{{ values.get('name', '') }}" placeholder="For example, Pune shared flat">
+<p>Enter every amount, using 0 where there is no cost. Include only your share for an individual scenario, or consistent combined figures for a household scenario.</p>
+{{ amount('monthly_income_minor', 'Monthly take-home income') }}
+<h3>Monthly costs</h3>
+{% for key, label in monthly.items() %}{{ amount(key, label) }}{% endfor %}
+<p class="muted">Include maintenance only once. Use Other monthly costs for commitments such as EMI, insurance and family support. Leave nothing out that you need the scenario to cover.</p>
+<h3>Upfront costs</h3>
+<label for="deposit_months">Security deposit in months of rent</label><input id="deposit_months" name="deposit_months" type="number" min="0" max="24" step="1" required value="{{ values.get('deposit_months', '') }}">
+{% for key, label in upfront.items() %}{{ amount(key, label) }}{% endfor %}
+<p class="row-actions"><button name="action" value="calculate" type="submit">Calculate</button>
+{% if role=='owner' %}<button name="action" value="save" type="submit">Save scenario</button>{% endif %}
+{% if city %}<a class="btn secondary" id="relocation-reset" href="{{ url_for('relocation.index', household_id=household.id, scenario_id=scenario.id if scenario else none, city=city.city_key, reset=1) }}">Reset inputs</a>{% endif %}</p>
+{% if role!='owner' %}<p class="muted">You can calculate estimates, but only household owners can save changes.</p>{% endif %}
+</form>
+{% endif %}
+{% if result %}<section class="card" id="relocation-results" aria-labelledby="results-heading">
+<h2 id="results-heading">Scenario estimate</h2>
+<div class="grid">
+<div><h3>Monthly costs</h3><p class="stat">{{ money(result.monthly_cost_minor) }}</p></div>
+<div><h3>{% if result.status=='deficit' %}Monthly shortfall{% elif result.status=='break_even' %}Monthly balance{% else %}Monthly surplus{% endif %}</h3><p class="stat">{{ money(result.monthly_surplus_minor|abs) }}</p></div>
+<div><h3>Upfront cash needed</h3><p class="stat">{{ money(result.upfront_cost_minor) }}</p></div>
+</div>
+{% if result.status=='deficit' %}<p class="errors">Entered monthly costs exceed your income. This scenario has a shortfall before any unlisted costs.</p>
+{% elif result.status=='break_even' %}<p>Entered income exactly covers entered monthly costs, with no remaining buffer.</p>
+{% else %}<p>This is the surplus after entered monthly costs only. It is not a guarantee that the move is affordable.</p>{% endif %}
+<p>Rent share of income: {% if result.rent_burden_ratio is not none %}{{ '%.1f'|format(result.rent_burden_ratio*100) }}%{% else %}not defined with zero income{% endif %}.</p>
+<div class="table-wrap"><table><caption>Upfront cash breakdown</caption><tbody>
+<tr><th scope="row">Security deposit (rent × deposit months)</th><td>{{ money(inputs.rent_minor * inputs.deposit_months) }}</td></tr>
+{% for key, label in upfront.items() %}<tr><th scope="row">{{ label }}</th><td>{{ money(inputs[key]) }}</td></tr>{% endfor %}
+</tbody></table></div>
+<p class="muted">Upfront cash is deposit plus moving and setup costs. Monthly rent is shown separately; first-month living costs and an emergency reserve are not included in that upfront total. This screen does not verify whether you have the cash available.</p>
+<ul>{% for assumption in result.assumptions %}<li>{{ assumption }}</li>{% endfor %}</ul>
+</section>{% endif %}
+{% endblock %}

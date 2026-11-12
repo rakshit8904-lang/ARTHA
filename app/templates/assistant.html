@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block title %}Artha Assistant · Artha AI{% endblock %}
+{% block content %}
+<section class="assistant-page" id="assistant-app"
+         data-csrf="{{ csrf_token() }}"
+         data-endpoint="{{ url_for('api.assistant_chat') }}"
+         data-status-endpoint="{{ url_for('api.assistant_status') }}">
+  <header class="assistant-header">
+    <div>
+      <p class="eyebrow">YOUR FINANCIAL COMPANION</p>
+      <h1>Let's make money make sense.</h1>
+      <p class="page-subtitle">A team of focused financial agents, coordinated by Artha.</p>
+    </div>
+    <div class="assistant-status"><span class="status-dot"></span> Demo assistant · Offline mode</div>
+  </header>
+
+  <div class="assistant-notice">
+    <span class="notice-icon">i</span>
+    <p><strong>Privacy and approval:</strong> By default, Artha receives only a minimised monthly summary after you select a household and month. You can separately opt in to share visible profile entries, goals and manually entered portfolio values with the Gemini. Agents are read-only and cannot change your records.</p>
+  </div>
+
+  <div class="agent-roster" aria-label="Available agents">
+    <span class="agent-chip">✳ Financial Analyst</span>
+    <span class="agent-chip">▤ Budget Planner</span>
+    <span class="agent-chip">◎ Goal Planner</span>
+    <span class="agent-chip">⌖ Relocation Advisor</span>
+    <span class="agent-chip">↗ Investment Educator</span>
+  </div>
+
+  <div class="assistant-context-bar">
+    <div class="context-picker">
+      <label for="assistant-household">FINANCIAL CONTEXT</label>
+      <select id="assistant-household">
+        <option value="">General questions only</option>
+        {% for h, role in households %}<option value="{{ h.id }}">{{ h.name }}</option>{% endfor %}
+      </select>
+    </div>
+    <div class="context-picker">
+      <label for="assistant-month">MONTH</label>
+      <input id="assistant-month" type="month" value="{{ current_month }}">
+    </div>
+    <span class="context-readonly">⌁ Read-only access</span>
+  </div>
+  <label class="extended-context-toggle" for="assistant-extended-context">
+    <input id="assistant-extended-context" type="checkbox">
+    <span><strong>Include my financial profile, goals and portfolio</strong><small>Optional demo context toggle. This prototype does not send your information to an external AI service.</small></span>
+  </label>
+
+  <div class="assistant-workspace">
+    <div class="assistant-toolbar">
+      <span id="provider-status" class="provider-status" role="status">Checking AI provider configuration…</span>
+      <button type="button" class="quiet-button" id="assistant-clear">Clear conversation</button>
+    </div>
+    <div class="assistant-conversation" aria-live="polite" aria-label="Conversation">
+      <div class="assistant-welcome" id="assistant-welcome">
+        <div class="assistant-spark">✳</div>
+        <h2>What would you like to figure out?</h2>
+        <p>Choose a suggested question or ask about budgeting, goals, loans or relocation. Demo responses are local examples.</p>
+        <div class="prompt-grid">
+          <button type="button" class="prompt-card" data-prompt="Analyse my spending this month and identify the largest categories."><span>01 · UNDERSTAND</span><strong>Where is my money going?</strong><b>↗</b></button>
+          <button type="button" class="prompt-card" data-prompt="Help me create a practical monthly budget for a first-time earner. Ask me for missing information."><span>02 · PLAN</span><strong>Build a realistic monthly budget.</strong><b>↗</b></button>
+          <button type="button" class="prompt-card" data-prompt="Help me work backwards from a savings goal and deadline. What information do you need?"><span>03 · SAVE</span><strong>Plan a savings goal.</strong><b>↗</b></button>
+          <button type="button" class="prompt-card" data-prompt="Explain recurring deposits, liquidity, risk and how interest is calculated in India."><span>04 · LEARN</span><strong>Understand RDs and other options.</strong><b>↗</b></button>
+          <button type="button" class="prompt-card" data-prompt="I am considering moving to another city. Help me calculate monthly affordability and upfront moving cash separately."><span>05 · EXPLORE</span><strong>Can I afford to move cities?</strong><b>↗</b></button>
+          <button type="button" class="prompt-card" data-prompt="Explain the difference between an emergency fund, short-term savings and investments."><span>06 · BUILD SECURITY</span><strong>Start building financial security.</strong><b>↗</b></button>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+    </div>
+    <form class="assistant-composer" id="assistant-form">
+      <label class="sr-only" for="assistant-input">Your question</label>
+      <textarea id="assistant-input" rows="1" maxlength="3000" placeholder="Ask anything about managing money…" required></textarea>
+      <div class="composer-bottom">
+        <span class="composer-hint">Offline demo responses · Enter to send</span>
+        <button type="submit" class="send-button" id="assistant-send" aria-label="Send message">↑</button>
+      </div>
+    </form>
+    <p class="assistant-footnote">Artha AI can make mistakes. Verify important financial, tax and investment decisions with reliable sources or a qualified professional. No live market prices or promised returns.</p>
+  </div>
+</section>
+<script src="{{ url_for('static', filename='assistant.js') }}" defer></script>
+{% endblock %}

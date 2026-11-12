@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f7f2">
+<title>{% block title %}Artha AI{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+<script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body class="app-body">
+{% if me %}
+<div class="app-shell">
+  <aside class="app-sidebar" aria-label="Main navigation">
+    <a class="brand-lockup" href="{{ url_for('web.dashboard') }}"><span class="brand-mark">a.</span><span>artha<span class="brand-ai">ai</span></span></a>
+    <div class="sidebar-caption">WORKSPACE</div>
+    <nav class="sidebar-nav">
+      <a href="{{ url_for('web.dashboard') }}" class="{% if request.endpoint == 'web.dashboard' %}active{% endif %}"><span class="nav-icon">⌂</span> Overview</a>
+      <a href="{{ url_for('web.assistant_page') }}" class="{% if request.endpoint == 'web.assistant_page' %}active{% endif %}"><span class="nav-icon">✳</span> Artha Assistant <span class="nav-new">AI</span></a>
+      <a href="{{ url_for('web.profile') }}" class="{% if request.endpoint == 'web.profile' %}active{% endif %}"><span class="nav-icon">◉</span> Financial profile</a>
+    </nav>
+    {% if household is defined and household %}
+    <div class="sidebar-caption sidebar-caption-spaced">YOUR MONEY</div>
+    <nav class="sidebar-nav">
+      <a href="{{ url_for('web.household', household_id=household.id) }}"><span class="nav-icon">▤</span> Household</a>
+      <a href="{{ url_for('web.ledger_page', household_id=household.id) }}"><span class="nav-icon">↕</span> Transactions</a>
+      <a href="{{ url_for('web.imports_page', household_id=household.id) }}"><span class="nav-icon">⇧</span> Import CSV / Excel</a>
+      <a href="{{ url_for('web.summary_page', household_id=household.id) }}"><span class="nav-icon">▥</span> Analysis</a>
+      <a href="{{ url_for('goals.index', household_id=household.id) }}"><span class="nav-icon">◎</span> Goals</a>
+      <a href="{{ url_for('plans.monthly', household_id=household.id) }}"><span class="nav-icon">▤</span> Monthly plan</a>
+      <a href="{{ url_for('web.city_affordability', household_id=household.id) }}"><span class="nav-icon">⌖</span> City comparison</a>
+      <a href="{{ url_for('web.assistant_page') }}"><span class="nav-icon">✳</span> Ask about my money</a>
+      <a href="{{ url_for('web.learning_centre', household_id=household.id) }}"><span class="nav-icon">⌘</span> Learn</a>
+    </nav>
+    {% endif %}
+    <div class="sidebar-bottom">
+      <div class="sidebar-user"><span class="avatar">{{ (me.display_name or 'A')[:1]|upper }}</span><span class="user-meta"><strong>{{ me.display_name }}</strong><small>Personal workspace</small></span></div>
+      <form method="post" action="{{ url_for('web.logout') }}" class="sidebar-logout"><input type="hidden" name="csrf_token" value="{{ csrf_token() }}"><button type="submit" class="quiet-button">Sign out ↗</button></form>
+    </div>
+  </aside>
+  <div class="app-main-column">
+    <header class="mobile-topbar"><a class="brand-lockup" href="{{ url_for('web.dashboard') }}"><span class="brand-mark">a.</span><span>artha<span class="brand-ai">ai</span></span></a><span class="mobile-user-avatar">{{ (me.display_name or 'A')[:1]|upper }}</span></header>
+    <main class="app-main">
+{% else %}
+<header class="public-top"><a class="brand-lockup" href="{{ url_for('web.index') }}"><span class="brand-mark">a.</span><span>artha<span class="brand-ai">ai</span></span></a></header>
+<main class="public-main">
+{% endif %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}<div class="flash {{ category }}" role="{{ 'alert' if category == 'error' else 'status' }}">{{ message }}</div>{% endfor %}
+{% endwith %}
+{% block content %}{% endblock %}
+</main>
+{% if me %}
+  </div>
+</div>
+<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+  <a href="{{ url_for('web.dashboard') }}" class="{% if request.endpoint == 'web.dashboard' %}active{% endif %}"><span>⌂</span><small>Home</small></a>
+  <a href="{{ url_for('web.profile') }}" class="{% if request.endpoint == 'web.profile' %}active{% endif %}"><span>◉</span><small>Profile</small></a>
+  <a href="{{ url_for('web.assistant_page') }}" class="{% if request.endpoint == 'web.assistant_page' %}active{% endif %}"><span>✳</span><small>Ask Artha</small></a>
+</nav>
+{% endif %}
+</body>
+</html>
